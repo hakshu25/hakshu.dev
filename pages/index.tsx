@@ -29,11 +29,12 @@ const useStyles = makeStyles(() => ({
 
 const Home: NextPage = () => {
   const styles = useStyles();
+  const title = "Hakshu's Website"
 
   return (
     <>
       <Head>
-        <title>Hakshu's Website</title>
+        <title>{title}</title>
         <meta name="description" content="Hakshu's WebSite and blog" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="icon" href="/img/icon.jpg" />
@@ -49,18 +50,17 @@ const Home: NextPage = () => {
       </AppBar>
       <main className={styles.main}>
         <Box className={styles.mainOpacity} display="flex" justifyContent="center" alignItems="center" mb={4} p={2}>
-          <Typography variant="h1">Hakshu's Website</Typography>
+          <Typography variant="h1">{title}</Typography>
         </Box>
         <Grid container justifyContent="center" alignItems="center" spacing={10}>
           <Grid item>
             <Link href="https://github.com/flyhighair" target="_blank" rel="noopener" className={styles.link}>
-              <GitHub width={100} height={100}>
-              </GitHub>
+              <GitHub width={100} height={100} />
             </Link>
           </Grid>
           <Grid item>
             <Link href="https://twitter.com/fly_highup_air" target="_blank" rel="noopener" className={styles.link}>
-              <Twitter width={100} height={100}></Twitter>
+              <Twitter width={100} height={100} />
             </Link>
           </Grid>
         </Grid>
