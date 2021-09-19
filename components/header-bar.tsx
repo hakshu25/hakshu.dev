@@ -1,19 +1,16 @@
-import { AppBar, Button, makeStyles, Toolbar, Typography } from '@material-ui/core'
-
-const useStyles = makeStyles(() => ({
-  title: {
-    flexGrow: 1,
-  },
-}))
+import { AppBar, Button, makeStyles, Toolbar } from '@material-ui/core'
+import Link from 'next/link';
 
 export const HeaderBar = () => {
-  const styles = useStyles();
-
   return (
     <AppBar position="sticky">
       <Toolbar>
-        <Typography variant="h5" className={styles.title}>Top</Typography>
-        <Button color="inherit">Blog</Button>
+        <Link href="/" passHref={true}>
+          <Button color="inherit">Top</Button>
+        </Link>
+        <Link href="/blog" passHref={true}>
+          <Button color="inherit">Blog</Button>
+        </Link>
       </Toolbar>
     </AppBar>
   )
