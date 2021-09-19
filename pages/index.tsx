@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import { AppBar, Box, Button, Toolbar, Typography, Grid, Link } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import { GitHub } from '../components/svgs/github'
@@ -33,15 +32,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content="Hakshu's WebSite and blog" />
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <link rel="icon" href="/img/icon.jpg" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-      </Head>
-
       <AppBar position="sticky">
         <Toolbar>
           <Typography variant="h5" className={styles.title}>Top</Typography>
