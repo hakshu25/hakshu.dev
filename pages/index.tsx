@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import { AppBar, Box, Button, Toolbar, Typography, Grid, Link } from '@material-ui/core'
+import { Box, Typography, Grid, Link } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import { GitHub } from '../components/svgs/github'
 import { Twitter } from '../components/svgs/twitter'
+import { HeaderBar } from '../components/header-bar'
 
 const useStyles = makeStyles(() => ({
   title: {
@@ -33,21 +33,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content="Hakshu's WebSite and blog" />
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <link rel="icon" href="/img/icon.jpg" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-      </Head>
-
-      <AppBar position="sticky">
-        <Toolbar>
-          <Typography variant="h5" className={styles.title}>Top</Typography>
-          <Button color="inherit">Blog</Button>
-        </Toolbar>
-      </AppBar>
+      <HeaderBar />
       <main className={styles.main}>
         <Box className={styles.mainOpacity} display="flex" justifyContent="center" alignItems="center" mb={4} p={2}>
           <Typography variant="h1">{title}</Typography>
