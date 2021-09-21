@@ -1,19 +1,29 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { HeaderBar } from '../../components/header-bar';
 import { blogClient, Post } from '../../lib/blog-client';
+import { formatDateTime } from '../../lib/date-util';
+import styles from '../../styles/Blog.module.css';
+import { Container } from '@material-ui/core';
 
 type Props = { post: Post };
 
 const BlogId: NextPage<Props> = ({ post }) => {
   return (
-    <main>
-      <h1>{post.title}</h1>
-      <p>{post.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${post.body}`,
-        }}
-      />
-    </main>
+    <>
+      <HeaderBar />
+      <Container maxWidth="xl">
+        <main className={styles.main}>
+          <h1 className={styles.title}>{post.title}</h1>
+          <p className={styles.publishedAt}>{formatDateTime(post.publishedAt)}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${post.body}`,
+            }}
+            className={styles.post}
+          />
+        </main>
+      </Container>
+    </>
   );
 }
 
