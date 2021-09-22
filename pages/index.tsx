@@ -1,9 +1,9 @@
-import type { NextPage } from 'next';
 import { Box, Typography, Grid, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import type { NextPage } from 'next';
+import { HeaderBar } from '../components/header-bar';
 import { GitHub } from '../components/svgs/github';
 import { Twitter } from '../components/svgs/twitter';
-import { HeaderBar } from '../components/header-bar';
 
 const useStyles = makeStyles(() => ({
   title: {

@@ -1,9 +1,9 @@
+import { Container } from '@material-ui/core';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { HeaderBar } from '../../components/header-bar';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatDateTime } from '../../lib/date-util';
 import styles from '../../styles/Blog.module.scss';
-import { Container } from '@material-ui/core';
 
 type Props = { post: Post };
 
