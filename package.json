@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier:check": "prettier --check .",
-    "prettier": "prettier --write .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "stylelint": "stylelint 'styles/*'",
     "stylelint:fix": "stylelint 'styles/*' --fix",
     "prepare": "husky install"
