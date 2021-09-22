@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:check": "prettier --check .",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
