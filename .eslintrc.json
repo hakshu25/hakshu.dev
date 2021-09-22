@@ -1,5 +1,6 @@
 {
   "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["unused-imports"],
   "rules": {
     "import/order": [
       "error",
@@ -8,6 +9,8 @@
           "order": "asc"
         }
       }
-    ]
+    ],
+    "no-unused-vars": "error",
+    "unused-imports/no-unused-imports": "error"
   }
 }
