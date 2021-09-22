@@ -26,3 +26,5 @@ jobs:
       - run: yarn stylelint
       - run: yarn prettier
       - run: yarn build
+        env:
+          CMS_API_KEY: 'api-key'
