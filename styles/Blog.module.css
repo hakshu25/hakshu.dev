@@ -35,3 +35,12 @@
   list-style-type: decimal;
   list-style-position: inside;
 }
+
+.post a {
+  color: #0033cc;
+  text-decoration: underline;
+}
+
+.post a:hover {
+  text-decoration: none;
+}
