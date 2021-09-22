@@ -14,7 +14,7 @@ const BlogId: NextPage<Props> = ({ post }) => {
       <Container maxWidth="xl">
         <main className={styles.main}>
           <h1 className={styles.title}>{post.title}</h1>
-          <p className={styles.publishedAt}>
+          <p className={styles['published-at']}>
             {formatDateTime(post.publishedAt)}
           </p>
           <div
