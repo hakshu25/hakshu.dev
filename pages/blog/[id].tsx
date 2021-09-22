@@ -14,7 +14,9 @@ const BlogId: NextPage<Props> = ({ post }) => {
       <Container maxWidth="xl">
         <main className={styles.main}>
           <h1 className={styles.title}>{post.title}</h1>
-          <p className={styles.publishedAt}>{formatDateTime(post.publishedAt)}</p>
+          <p className={styles.publishedAt}>
+            {formatDateTime(post.publishedAt)}
+          </p>
           <div
             dangerouslySetInnerHTML={{
               __html: `${post.body}`,
@@ -25,10 +27,12 @@ const BlogId: NextPage<Props> = ({ post }) => {
       </Container>
     </>
   );
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { contents }: { contents: Post[] } = await blogClient.get({ endpoint: "posts" });
+  const { contents }: { contents: Post[] } = await blogClient.get({
+    endpoint: 'posts',
+  });
 
   const paths = contents.map((content) => `/blog/${content.id}`);
   return { paths, fallback: false };
@@ -36,7 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id as string;
-  const post = await blogClient.get({ endpoint: "posts", contentId: id });
+  const post = await blogClient.get({ endpoint: 'posts', contentId: id });
 
   return {
     props: {

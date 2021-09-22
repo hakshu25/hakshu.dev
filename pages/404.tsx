@@ -13,6 +13,6 @@ const Custom404: NextPage = () => {
       </main>
     </>
   );
-}
+};
 
 export default Custom404;

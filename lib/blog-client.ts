@@ -15,4 +15,4 @@ export interface Post {
 export const blogClient = createClient({
   serviceDomain: 'hakshu-blog',
   apiKey: apiKey,
-})
+});

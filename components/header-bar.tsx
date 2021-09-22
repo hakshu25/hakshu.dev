@@ -1,4 +1,4 @@
-import { AppBar, Button, makeStyles, Toolbar } from '@material-ui/core'
+import { AppBar, Button, Toolbar } from '@material-ui/core';
 import Link from 'next/link';
 
 export const HeaderBar = () => {
@@ -13,5 +13,5 @@ export const HeaderBar = () => {
         </Link>
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
