@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "prettier:check": "prettier --check .",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "stylelint": "stylelint 'styles/*'",
+    "stylelint:fix": "stylelint 'styles/*' --fix"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
