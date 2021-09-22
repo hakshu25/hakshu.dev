@@ -6,19 +6,39 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:check": "prettier --check .",
+    "prettier": "prettier --write .",
+    "stylelint": "stylelint 'styles/*'",
+    "stylelint:fix": "stylelint 'styles/*' --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "microcms-js-sdk": "^1.2.0",
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.42.1"
   },
   "devDependencies": {
     "@types/react": "17.0.21",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-unused-imports": "^1.1.4",
+    "husky": "^7.0.0",
+    "lint-staged": ">=10",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0",
     "typescript": "4.4.3"
+  },
+  "lint-staged": {
+    "*.ts*": "eslint --cache --fix",
+    "*.scss": "stylelint --fix",
+    "*": "prettier --ignore-unknown --write"
   }
 }

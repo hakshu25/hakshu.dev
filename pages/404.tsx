@@ -1,6 +1,6 @@
+import { Box } from '@material-ui/core';
 import { NextPage } from 'next';
 import { HeaderBar } from '../components/header-bar';
-import { Box } from '@material-ui/core';
 
 const Custom404: NextPage = () => {
   return (
@@ -13,6 +13,6 @@ const Custom404: NextPage = () => {
       </main>
     </>
   );
-}
+};
 
 export default Custom404;

@@ -1,0 +1,48 @@
+.main {
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.published-at {
+  margin-bottom: 40px;
+}
+
+.post {
+  > h1 {
+    background-color: #eee;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    padding: 10px 20px;
+  }
+
+  > h2 {
+    border-bottom: 1px solid #ddd;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px 0 16px;
+  }
+
+  > p {
+    letter-spacing: 0.2px;
+    line-height: 1.8;
+  }
+
+  > ol {
+    list-style-position: inside;
+    list-style-type: decimal;
+  }
+
+  a {
+    color: #03c;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
