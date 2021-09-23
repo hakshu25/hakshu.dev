@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { HeaderBar } from '../../components/header-bar';
 import { blogClient, Post } from '../../lib/blog-client';

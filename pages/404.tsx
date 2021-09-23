@@ -1,4 +1,4 @@
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 import { NextPage } from 'next';
 import { HeaderBar } from '../components/header-bar';
 
