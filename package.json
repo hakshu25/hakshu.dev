@@ -11,6 +11,7 @@
     "prettier:fix": "prettier --write .",
     "stylelint": "stylelint 'styles/*'",
     "stylelint:fix": "stylelint 'styles/*' --fix",
+    "test": "jest --watch",
     "prepare": "husky install"
   },
   "dependencies": {
