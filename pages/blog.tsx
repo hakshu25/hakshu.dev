@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemText, Divider } from '@material-ui/core';
+import { List, ListItem, ListItemText, Divider } from '@mui/material';
 import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import { HeaderBar } from '../components/header-bar';
