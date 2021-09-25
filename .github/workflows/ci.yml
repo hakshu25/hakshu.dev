@@ -9,10 +9,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TZ: 'Asia/Tokyo'
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x, 16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -25,3 +27,4 @@ jobs:
       - run: yarn lint
       - run: yarn stylelint
       - run: yarn prettier
+      - run: yarn test:ci

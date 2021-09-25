@@ -2,7 +2,7 @@ import { Container } from '@mui/material';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { HeaderBar } from '../../components/header-bar';
 import { blogClient, Post } from '../../lib/blog-client';
-import { formatDateTime } from '../../lib/date-util';
+import { formatUtcDateTimeToJst } from '../../lib/date-util';
 import styles from '../../styles/Blog.module.scss';
 
 type Props = { post: Post };
@@ -15,7 +15,7 @@ const BlogId: NextPage<Props> = ({ post }) => {
         <main className={styles.main}>
           <h1 className={styles.title}>{post.title}</h1>
           <p className={styles['published-at']}>
-            {formatDateTime(post.publishedAt)}
+            {formatUtcDateTimeToJst(post.publishedAt)}
           </p>
           <div
             dangerouslySetInnerHTML={{
