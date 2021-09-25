@@ -12,6 +12,7 @@
     "stylelint": "stylelint 'styles/*'",
     "stylelint:fix": "stylelint 'styles/*' --fix",
     "test": "jest --watch",
+    "test:ci": "jest --ci",
     "prepare": "husky install"
   },
   "dependencies": {
