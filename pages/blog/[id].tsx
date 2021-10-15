@@ -4,6 +4,7 @@ import { useRouter } from 'next/dist/client/router';
 import { HeaderBar } from '../../components/header-bar';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJst } from '../../lib/date-util';
+import { revalidateSeconds } from '../../lib/isr-settings';
 import styles from '../../styles/Blog.module.scss';
 import Custom404 from '../404';
 
@@ -50,8 +51,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 };
 
-const revalidate = 60;
-
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id as string;
   try {
@@ -61,13 +60,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
       props: {
         post,
       },
-      revalidate,
+      revalidate: revalidateSeconds,
     };
   } catch (e) {
     console.error(e);
     return {
       props: {},
-      revalidate,
+      revalidate: revalidateSeconds,
     };
   }
 };

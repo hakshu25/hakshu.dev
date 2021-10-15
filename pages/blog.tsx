@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { HeaderBar } from '../components/header-bar';
 import { blogClient, Post } from '../lib/blog-client';
 import { formatUtcDateTimeToJst } from '../lib/date-util';
+import { revalidateSeconds } from '../lib/isr-settings';
 
 type Props = { posts: Post[] };
 
@@ -39,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       posts: contents,
     },
-    revalidate: 60,
+    revalidate: revalidateSeconds,
   };
 };
 
