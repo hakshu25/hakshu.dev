@@ -16,7 +16,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
         <List>
           {posts.map((post) => (
             <li key={post.id}>
-              <Link href={`/blog/${post.id}`} passHref={true}>
+              <Link href={`/blog/${post.id}`} passHref={true} prefetch={false}>
                 <ListItem button component="a">
                   <ListItemText
                     primary={post.title}
