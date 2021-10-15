@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   main: {
-    background: "url('/img/top.jpg') no-repeat fixed left bottom",
+    background: "url('/img/top.webp') no-repeat fixed left bottom",
     width: '100vw',
     height: '60vh',
     color: '#fff',
