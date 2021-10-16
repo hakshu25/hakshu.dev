@@ -1,8 +1,8 @@
-import { Box, Typography, Grid, Link } from '@mui/material';
+import { Grid, Link } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { HeaderBar } from '../components/header-bar';
+import { SiteImage } from '../components/site-image';
 import { GitHub } from '../components/svgs/github';
 import { Twitter } from '../components/svgs/twitter';
 
@@ -15,44 +15,16 @@ const useStyles = makeStyles(() => ({
       opacity: 0.7,
     },
   },
-  siteName: {
-    transform: 'translate(-50%, -50%)',
-  },
-  image: {
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-  },
 }));
 
 const Home: NextPage = () => {
   const styles = useStyles();
-  const title = "Hakshu's Website";
 
   return (
     <>
       <HeaderBar />
       <main>
-        <Box>
-          <Image
-            src="/img/top.webp"
-            alt="Picture of tokyo night view"
-            width={1920}
-            height={949}
-            layout="fixed"
-          />
-          <Typography
-            className={styles.siteName}
-            variant="h1"
-            color={'#fff'}
-            position={'absolute'}
-            top={'50%'}
-            left={'50%'}
-            width={'100%'}
-            m={0}
-            textAlign="center"
-          >
-            {title}
-          </Typography>
-        </Box>
+        <SiteImage />
         <Grid
           container
           justifyContent="center"
