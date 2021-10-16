@@ -8,7 +8,7 @@ export const HeaderBar = () => {
         <Link href="/" passHref={true}>
           <Button color="inherit">Top</Button>
         </Link>
-        <Link href="/blog" passHref={true}>
+        <Link href="/blog" passHref={true} prefetch={false}>
           <Button color="inherit">Blog</Button>
         </Link>
       </Toolbar>
