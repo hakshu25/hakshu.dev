@@ -1,7 +1,7 @@
 import { Link } from '@mui/material';
 import { SvgProps } from '../lib/svg-props';
-import { GitHub } from './svgs/GitHub';
-import { Twitter } from './svgs/Twitter';
+import { GitHubIcon } from './svgs/GitHubIcon';
+import { TwitterIcon } from './svgs/TwitterIcon';
 
 export type IconName = 'github' | 'twitter';
 interface LinkMapping {
@@ -19,11 +19,11 @@ type Links = GithubLink & TwitterLink;
 const links: Links = {
   github: {
     link: 'https://github.com/flyhighair',
-    component: GitHub,
+    component: GitHubIcon,
   },
   twitter: {
     link: 'https://twitter.com/fly_highup_air',
-    component: Twitter,
+    component: TwitterIcon,
   },
 };
 

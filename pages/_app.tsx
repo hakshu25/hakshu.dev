@@ -8,7 +8,7 @@ import {
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-declare module '@mui/styles/defaultTheme' {
+declare module '@mui/material/styles' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   type DefaultTheme = Theme;
 }
