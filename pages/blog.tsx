@@ -1,9 +1,7 @@
-import { List, ListItem, ListItemText, Divider } from '@mui/material';
 import { GetStaticProps, NextPage } from 'next';
-import Link from 'next/link';
+import { BlogPostList } from '../components/blog-post-list';
 import { HeaderBar } from '../components/header-bar';
 import { blogClient, Post } from '../lib/blog-client';
-import { formatUtcDateTimeToJst } from '../lib/date-util';
 import { revalidateSeconds } from '../lib/isr-settings';
 
 type Props = { posts: Post[] };
@@ -13,21 +11,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
     <>
       <HeaderBar />
       <main>
-        <List>
-          {posts.map((post) => (
-            <li key={post.id}>
-              <Link href={`/blog/${post.id}`} passHref={true} prefetch={false}>
-                <ListItem button component="a">
-                  <ListItemText
-                    primary={post.title}
-                    secondary={formatUtcDateTimeToJst(post.publishedAt)}
-                  />
-                </ListItem>
-              </Link>
-              <Divider />
-            </li>
-          ))}
-        </List>
+        <BlogPostList posts={posts} />
       </main>
     </>
   );
