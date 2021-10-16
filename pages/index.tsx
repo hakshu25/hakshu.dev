@@ -1,6 +1,7 @@
 import { Box, Typography, Grid, Link } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import { HeaderBar } from '../components/header-bar';
 import { GitHub } from '../components/svgs/github';
 import { Twitter } from '../components/svgs/twitter';
@@ -14,16 +15,11 @@ const useStyles = makeStyles(() => ({
       opacity: 0.7,
     },
   },
-  main: {
-    background: "url('/img/top.jpg') no-repeat fixed left bottom",
-    width: '100vw',
-    height: '60vh',
-    color: '#fff',
+  siteName: {
+    transform: 'translate(-50%, -50%)',
   },
-  mainOpacity: {
+  image: {
     backgroundColor: 'rgba(0, 0, 0, 0.3)',
-    width: '100%',
-    height: '100%',
   },
 }));
 
@@ -34,22 +30,35 @@ const Home: NextPage = () => {
   return (
     <>
       <HeaderBar />
-      <main className={styles.main}>
-        <Box
-          className={styles.mainOpacity}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          mb={4}
-          p={2}
-        >
-          <Typography variant="h1">{title}</Typography>
+      <main>
+        <Box>
+          <Image
+            src="/img/top.webp"
+            alt="Picture of tokyo night view"
+            width={1920}
+            height={949}
+            layout="fixed"
+          />
+          <Typography
+            className={styles.siteName}
+            variant="h1"
+            color={'#fff'}
+            position={'absolute'}
+            top={'50%'}
+            left={'50%'}
+            width={'100%'}
+            m={0}
+            textAlign="center"
+          >
+            {title}
+          </Typography>
         </Box>
         <Grid
           container
           justifyContent="center"
           alignItems="center"
-          spacing={10}
+          columnSpacing={10}
+          mt={4}
         >
           <Grid item>
             <Link
