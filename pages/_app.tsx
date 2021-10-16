@@ -9,8 +9,8 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 declare module '@mui/styles/defaultTheme' {
-  // eslint-disable-next-line no-unused-vars
-  interface DefaultTheme extends Theme {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  type DefaultTheme = Theme;
 }
 
 const theme = createTheme();
