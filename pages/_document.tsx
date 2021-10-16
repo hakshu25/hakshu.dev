@@ -15,6 +15,7 @@ class CustomDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
+          <link rel="preload" as="image" href="/img/top.webp" />
         </Head>
         <body>
           <Main />
