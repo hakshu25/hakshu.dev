@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class CustomDocument extends Document {
   render() {
     return (
-      <Html lang="jp">
+      <Html lang="ja">
         <Head>
           <meta name="description" content="Hakshu's WebSite and blog" />
           <link rel="icon" href="/img/icon.webp" />
