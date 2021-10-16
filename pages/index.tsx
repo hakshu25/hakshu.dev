@@ -14,10 +14,12 @@ const useStyles = makeStyles(() => ({
       opacity: 0.7,
     },
   },
-  main: {
-    background: "url('/img/top.webp') no-repeat fixed left bottom",
+  mainImage: {
+    backgroundImage: "url('/img/top.webp')",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
     width: '100vw',
-    height: '60vh',
+    height: '50vh',
     color: '#fff',
   },
   mainOpacity: {
@@ -34,22 +36,24 @@ const Home: NextPage = () => {
   return (
     <>
       <HeaderBar />
-      <main className={styles.main}>
-        <Box
-          className={styles.mainOpacity}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          mb={4}
-          p={2}
-        >
-          <Typography variant="h1">{title}</Typography>
+      <main>
+        <Box className={styles.mainImage}>
+          <Box
+            className={styles.mainOpacity}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            p={2}
+          >
+            <Typography variant="h1">{title}</Typography>
+          </Box>
         </Box>
         <Grid
           container
           justifyContent="center"
           alignItems="center"
-          spacing={10}
+          columnSpacing={10}
+          mt={4}
         >
           <Grid item>
             <Link
