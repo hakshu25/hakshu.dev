@@ -1,6 +1,6 @@
 import { List, Divider } from '@mui/material';
 import { Post } from '../lib/blog-client';
-import { BlogPostLink } from './blog-post-link';
+import { BlogPostLink } from './BlogPostLink';
 
 type Props = { posts: Post[] };
 

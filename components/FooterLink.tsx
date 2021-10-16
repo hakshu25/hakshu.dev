@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import { IconLink } from './icon-link';
+import { IconLink } from './IconLink';
 
 export const FooterLink = () => {
   return (

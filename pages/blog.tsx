@@ -1,6 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
-import { BlogPostList } from '../components/blog-post-list';
-import { HeaderBar } from '../components/header-bar';
+import { BlogPostList } from '../components/BlogPostList';
+import { HeaderBar } from '../components/HeaderBar';
 import { blogClient, Post } from '../lib/blog-client';
 import { revalidateSeconds } from '../lib/isr-settings';
 

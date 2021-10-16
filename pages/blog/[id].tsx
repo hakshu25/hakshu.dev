@@ -1,7 +1,7 @@
 import { Container } from '@mui/material';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
-import { HeaderBar } from '../../components/header-bar';
+import { HeaderBar } from '../../components/HeaderBar';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJst } from '../../lib/date-util';
 import { revalidateSeconds } from '../../lib/isr-settings';

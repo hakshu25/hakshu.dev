@@ -1,7 +1,7 @@
 import { Link } from '@mui/material';
-import { GitHub } from '../components/svgs/github';
 import { SvgProps } from '../lib/svg-props';
-import { Twitter } from './svgs/twitter';
+import { GitHub } from './svgs/GitHub';
+import { Twitter } from './svgs/Twitter';
 
 export type IconName = 'github' | 'twitter';
 interface LinkMapping {

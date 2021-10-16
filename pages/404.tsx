@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import { NextPage } from 'next';
-import { HeaderBar } from '../components/header-bar';
+import { HeaderBar } from '../components/HeaderBar';
 
 const Custom404: NextPage = () => {
   return (
