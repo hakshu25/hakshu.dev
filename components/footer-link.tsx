@@ -1,6 +1,5 @@
-import { Grid, Link } from '@mui/material';
-import { GitHub } from '../components/svgs/github';
-import { Twitter } from '../components/svgs/twitter';
+import { Grid } from '@mui/material';
+import { IconLink } from './icon-link';
 
 export const FooterLink = () => {
   return (
@@ -11,32 +10,10 @@ export const FooterLink = () => {
       columnSpacing={10}
     >
       <Grid item>
-        <Link
-          href="https://github.com/flyhighair"
-          target="_blank"
-          rel="noopener"
-          sx={{
-            ':hover': {
-              opacity: 0.7,
-            },
-          }}
-        >
-          <GitHub width={100} height={100} />
-        </Link>
+        <IconLink iconName={'github'}></IconLink>
       </Grid>
       <Grid item>
-        <Link
-          href="https://twitter.com/fly_highup_air"
-          target="_blank"
-          rel="noopener"
-          sx={{
-            ':hover': {
-              opacity: 0.7,
-            },
-          }}
-        >
-          <Twitter width={100} height={100} />
-        </Link>
+        <IconLink iconName={'twitter'}></IconLink>
       </Grid>
     </Grid>
   );
