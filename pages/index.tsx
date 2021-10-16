@@ -18,6 +18,7 @@ const useStyles = makeStyles(() => ({
     backgroundImage: "url('/img/top.webp')",
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    backgroundSize: 'cover',
     width: '100vw',
     height: '50vh',
     color: '#fff',
