@@ -16,8 +16,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@emotion/react": "11.7.1",
-    "@emotion/styled": "11.6.0",
+    "@emotion/react": "11.8.1",
+    "@emotion/styled": "11.8.1",
     "@mui/material": "5.4.3",
     "@mui/styles": "5.4.2",
     "microcms-js-sdk": "2.0.0",
