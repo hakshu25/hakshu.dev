@@ -18,8 +18,8 @@
   "dependencies": {
     "@emotion/react": "11.8.2",
     "@emotion/styled": "11.8.1",
-    "@mui/material": "5.5.2",
-    "@mui/styles": "5.5.1",
+    "@mui/material": "5.5.3",
+    "@mui/styles": "5.5.3",
     "microcms-js-sdk": "2.0.0",
     "next": "12.1.1",
     "react": "17.0.2",
