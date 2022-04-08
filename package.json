@@ -29,7 +29,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.4",
-    "@types/react": "17.0.43",
+    "@types/react": "17.0.44",
     "@typescript-eslint/eslint-plugin": "5.17.0",
     "@typescript-eslint/parser": "5.17.0",
     "babel-jest": "27.5.1",
