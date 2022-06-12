@@ -1,4 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>flyhighair/renovate-config"]
+  "extends": ["local>flyhighair/renovate-config"],
+  "packageRules": [
+    {
+      "groupName": "eslint packages",
+      "matchPackagePatterns": ["^eslint", "^@typescript-eslint/"]
+    },
+    {
+      "groupName": "stylelint packages",
+      "matchPackagePatterns": ["^stylelint"]
+    }
+  ]
 }
