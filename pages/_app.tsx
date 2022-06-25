@@ -1,4 +1,5 @@
 import '../styles/globals.scss';
+import 'highlight.js/scss/atom-one-dark.scss';
 import {
   createTheme,
   ThemeProvider,
