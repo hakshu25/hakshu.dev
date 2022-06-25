@@ -1,6 +1,8 @@
 import { Container } from '@mui/material';
+import hljs from 'highlight.js';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
+import { useEffect } from 'react';
 import { HeaderBar } from '../../components/HeaderBar';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJst } from '../../lib/date-util';
@@ -11,6 +13,11 @@ import Custom404 from '../404';
 type Props = { post: Post };
 
 const BlogId: NextPage<Props> = ({ post }) => {
+  useEffect(() => {
+    hljs.configure({ languages: ['bash', 'js', 'ts', 'html', 'css', 'scss'] });
+    hljs.highlightAll();
+  });
+
   const router = useRouter();
   if (!router.isFallback && !post?.id) {
     return <Custom404 />;
