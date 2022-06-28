@@ -1,4 +1,4 @@
-import { formatUtcDateTimeToJst } from '../../lib/date-util';
+import { formatUtcDateTimeToJst } from '../../src/lib/date-util';
 
 describe('DateUtil', () => {
   describe('formatUtcDateTimeToJst()', () => {

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { IconLink } from '../../components/IconLink';
+import { IconLink } from '../../src/components/IconLink';
 
 describe('IconLink', () => {
   it('renders github link', () => {
