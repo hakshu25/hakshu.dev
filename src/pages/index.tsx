@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import type { NextPage } from 'next';
 import { About } from '../components/About';
 import { FooterLink } from '../components/FooterLink';
@@ -21,9 +20,9 @@ const Home: NextPage = () => {
           <Skill />
         </div>
         <SeparateLine />
-        <Box mt={4}>
+        <footer className="my-8">
           <FooterLink />
-        </Box>
+        </footer>
       </main>
     </>
   );
