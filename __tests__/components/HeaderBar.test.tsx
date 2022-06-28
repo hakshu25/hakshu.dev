@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { HeaderBar, headerTitles } from '../../components/HeaderBar';
+import { HeaderBar, headerTitles } from '../../src/components/HeaderBar';
 
 describe('HeaderBar', () => {
   it('renders links', () => {
