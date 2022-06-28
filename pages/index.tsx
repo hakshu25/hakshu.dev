@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <HeaderBar />
       <main className="mx-20 my-10 h-screen">
         <SiteImage />
-        <div className="mx-64 my-8">
+        <div className="sm:mx-16 md:mx-32 lg:mx-64 my-8">
           <About />
         </div>
         <SeparateLine />
