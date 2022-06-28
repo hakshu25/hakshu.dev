@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
-import { HeaderBar } from '../../components/HeaderBar';
+import { HeaderBar, headerTitles } from '../../components/HeaderBar';
 
 describe('HeaderBar', () => {
   it('renders links', () => {
-    render(<HeaderBar />);
+    render(<HeaderBar headerTitle={headerTitles.about} />);
 
-    const topLink = screen.getByText(/top/i).closest('a');
-    const blogLink = screen.getByText(/blog/i).closest('a');
+    const topLink = screen.getByRole('link', { name: /about/i });
+    const blogLink = screen.getByRole('link', { name: /blog/i });
 
     expect(topLink).toHaveAttribute('href', '/');
     expect(blogLink).toHaveAttribute('href', '/blog');
