@@ -1,4 +1,3 @@
-import { Link } from '@mui/material';
 import { SvgProps } from '../lib/svg-props';
 import { GitHubIcon } from './svgs/GitHubIcon';
 import { TwitterIcon } from './svgs/TwitterIcon';
@@ -36,17 +35,13 @@ export const IconLink = ({ iconName }: Props) => {
   const IconComponent = icon.component;
 
   return (
-    <Link
+    <a
       href={icon.link}
       target="_blank"
-      rel="noopener"
-      sx={{
-        ':hover': {
-          opacity: 0.7,
-        },
-      }}
+      rel="noopener noreferrer"
+      className="hover:opacity-70"
     >
       <IconComponent width={100} height={100} />
-    </Link>
+    </a>
   );
 };
