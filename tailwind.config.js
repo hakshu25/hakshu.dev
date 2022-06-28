@@ -12,6 +12,7 @@ module.exports = {
     colors: {
       midnight: '#28293E',
       white: colors.white,
+      skin: '#F3D1BF',
     },
   },
   plugins: [],
