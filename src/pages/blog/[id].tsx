@@ -1,13 +1,12 @@
-import { Container } from '@mui/material';
 import hljs from 'highlight.js';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
+import Image from 'next/image';
 import { useEffect } from 'react';
 import { HeaderBar, headerTitles } from '../../components/HeaderBar';
 import { blogClient, Post } from '../../lib/blog-client';
-import { formatUtcDateTimeToJst } from '../../lib/date-util';
+import { formatUtcDateTimeToJstDate } from '../../lib/date-util';
 import { revalidateSeconds } from '../../lib/isr-settings';
-import styles from '../../styles/Blog.module.scss';
 import Custom404 from '../404';
 
 type Props = { post: Post };
@@ -26,20 +25,28 @@ const BlogId: NextPage<Props> = ({ post }) => {
   return (
     <>
       <HeaderBar headerTitle={headerTitles.blog} />
-      <Container maxWidth="xl" className="mt-4">
-        <main className={styles.main}>
-          <h1 className={styles.title}>{post.title}</h1>
-          <p className={styles['published-at']}>
-            {formatUtcDateTimeToJst(post.publishedAt)}
+      <main className="my-8 mx-10">
+        <article>
+          <h1 className="text-dark text-6xl font-bold mb-4">{post.title}</h1>
+          <p className="text-right text-dark mb-4">
+            {formatUtcDateTimeToJstDate(post.publishedAt)}
           </p>
+          <div className="w-1/2 h-80 relative text-center mb-8 mx-auto">
+            <Image
+              src={post.image.url}
+              alt="Picture of article"
+              className="rounded-md"
+              layout="fill"
+            ></Image>
+          </div>
           <div
             dangerouslySetInnerHTML={{
               __html: `${post.body}`,
             }}
-            className={styles.post}
+            className="post"
           />
-        </main>
-      </Container>
+        </article>
+      </main>
     </>
   );
 };

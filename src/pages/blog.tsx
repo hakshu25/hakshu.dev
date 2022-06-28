@@ -10,7 +10,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <HeaderBar headerTitle={headerTitles.blog} />
-      <main>
+      <main className="my-10 mx-8">
         <BlogPostList posts={posts} />
       </main>
     </>
