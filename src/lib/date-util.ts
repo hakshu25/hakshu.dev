@@ -1,6 +1,6 @@
-export const formatUtcDateTimeToJst = (dateTime: string): string => {
+export const formatUtcDateTimeToJstDate = (dateTime: string): string => {
   const date = new Date(dateTime);
-  const jstDateTime = date.toLocaleString('ja-JP');
+  const jstDateTime = date.toLocaleDateString('ja-JP');
   if (jstDateTime === 'Invalid Date') {
     return '';
   }

@@ -5,7 +5,7 @@ import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
 import { HeaderBar, headerTitles } from '../../components/HeaderBar';
 import { blogClient, Post } from '../../lib/blog-client';
-import { formatUtcDateTimeToJst } from '../../lib/date-util';
+import { formatUtcDateTimeToJstDate } from '../../lib/date-util';
 import { revalidateSeconds } from '../../lib/isr-settings';
 import styles from '../../styles/Blog.module.scss';
 import Custom404 from '../404';
@@ -30,7 +30,7 @@ const BlogId: NextPage<Props> = ({ post }) => {
         <main className={styles.main}>
           <h1 className={styles.title}>{post.title}</h1>
           <p className={styles['published-at']}>
-            {formatUtcDateTimeToJst(post.publishedAt)}
+            {formatUtcDateTimeToJstDate(post.publishedAt)}
           </p>
           <div
             dangerouslySetInnerHTML={{
