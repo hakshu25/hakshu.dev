@@ -3,7 +3,7 @@ import hljs from 'highlight.js';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
-import { HeaderBar } from '../../components/HeaderBar';
+import { HeaderBar, headerTitles } from '../../components/HeaderBar';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJst } from '../../lib/date-util';
 import { revalidateSeconds } from '../../lib/isr-settings';
@@ -25,8 +25,8 @@ const BlogId: NextPage<Props> = ({ post }) => {
 
   return (
     <>
-      <HeaderBar />
-      <Container maxWidth="xl">
+      <HeaderBar headerTitle={headerTitles.blog} />
+      <Container maxWidth="xl" className="mt-4">
         <main className={styles.main}>
           <h1 className={styles.title}>{post.title}</h1>
           <p className={styles['published-at']}>

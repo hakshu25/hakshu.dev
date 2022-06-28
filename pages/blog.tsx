@@ -1,6 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import { BlogPostList } from '../components/BlogPostList';
-import { HeaderBar } from '../components/HeaderBar';
+import { HeaderBar, headerTitles } from '../components/HeaderBar';
 import { blogClient, Post } from '../lib/blog-client';
 import { revalidateSeconds } from '../lib/isr-settings';
 
@@ -9,7 +9,7 @@ type Props = { posts: Post[] };
 const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <>
-      <HeaderBar />
+      <HeaderBar headerTitle={headerTitles.blog} />
       <main>
         <BlogPostList posts={posts} />
       </main>
