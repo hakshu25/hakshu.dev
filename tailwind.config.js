@@ -4,7 +4,11 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: ['./pages/**/*.tsx', './components/**/*.tsx'],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        128: '32rem',
+      },
+    },
     colors: {
       midnight: '#28293E',
       white: colors.white,

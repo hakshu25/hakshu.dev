@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <HeaderBar />
-      <main>
+      <main className="mx-20 my-10 text-center h-screen">
         <SiteImage />
         <Box mt={4}>
           <FooterLink />
