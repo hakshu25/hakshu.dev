@@ -18,3 +18,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer components {
+  .header2 {
+    @apply text-dark text-6xl font-bold mb-8;
+  }
+
+  .header3 {
+    @apply text-dark text-2xl font-bold mb-4;
+  }
+
+  .list {
+    @apply text-darkgray leading-8 list-disc pl-5 mb-8;
+  }
+}
