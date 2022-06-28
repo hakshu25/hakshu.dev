@@ -5,6 +5,7 @@ import { FooterLink } from '../components/FooterLink';
 import { HeaderBar } from '../components/HeaderBar';
 import { SeparateLine } from '../components/SeparateLine';
 import { SiteImage } from '../components/SiteImage';
+import { Skill } from '../components/Skill';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,10 @@ const Home: NextPage = () => {
         <SiteImage />
         <div className="mx-64 my-8">
           <About />
+        </div>
+        <SeparateLine />
+        <div className="sm:mx-16 md:mx-32 lg:mx-64 my-8">
+          <Skill />
         </div>
         <SeparateLine />
         <Box mt={4}>
