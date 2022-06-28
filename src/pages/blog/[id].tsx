@@ -31,7 +31,7 @@ const BlogId: NextPage<Props> = ({ post }) => {
           <p className="text-right text-dark mb-4">
             {formatUtcDateTimeToJstDate(post.publishedAt)}
           </p>
-          <div className="w-full h-80 relative  text-center mb-8">
+          <div className="w-1/2 h-80 relative text-center mb-8 mx-auto">
             <Image
               src={post.image.url}
               alt="Picture of article"
