@@ -6,7 +6,7 @@ export const HeaderBar = () => {
       <div className="text-2xl col-start-1 col-span-4">
         Hakshu&apos;s Portfolio
       </div>
-      <nav className="col-start-12">
+      <nav className="row-start-1 col-start-12 sm:col-start-11 sm:col-span-2">
         <ul className="list-none grid grid-cols-2 place-items-end">
           <li>
             <Link href="/" passHref={true}>
