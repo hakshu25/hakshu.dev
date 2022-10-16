@@ -10,6 +10,18 @@ export const About = () => {
         <br />
         2022年現在はエンジニアを休みながら教師として活動中。
       </p>
+      <p className="text-darkgray">
+        その他最近のエンジニアリング絡みの活動などは
+        <a
+          href="https://lapras.com/public/WBVHFUW"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          lapras
+        </a>
+        をご覧ください。
+      </p>
     </section>
   );
 };
