@@ -1,0 +1,32 @@
+import { Feed } from 'feed';
+import { Post } from './blog-client';
+
+export function generateRssXml(posts: Post[], siteUrl: string) {
+  const feed = new Feed({
+    title: 'タイトル',
+    description: '説明',
+    id: siteUrl,
+    link: siteUrl,
+    language: 'ja',
+    favicon: `${siteUrl}/favicon.ico`,
+    copyright: 'コピーライト',
+    author: {
+      name: 'hakshu',
+      link: siteUrl,
+    },
+  });
+
+  posts.forEach((post) => {
+    feed.addItem({
+      title: post.title,
+      id: `${siteUrl}/blog/${post.id}`,
+      link: `${siteUrl}/blog/${post.id}`,
+      description: post.title,
+      content: post.body,
+      date: new Date(post.publishedAt),
+      image: post.image.url,
+    });
+  });
+
+  return feed.rss2();
+}
