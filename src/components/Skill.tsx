@@ -24,7 +24,7 @@ export const Skill = () => {
         </li>
         <li>興味を持った技術は躊躇せず、実際に触るようにしています。</li>
       </ul>
-      <h3>1年以上の実務経験がある技術</h3>
+      <h3 className="header3">1年以上の実務経験がある技術</h3>
       <ul className="list grid grid-cols-2">
         <li>JavaScript</li>
         <li>HTML</li>
