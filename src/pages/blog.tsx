@@ -1,6 +1,8 @@
 import { GetStaticProps, NextPage } from 'next';
 import { BlogPostList } from '../components/BlogPostList';
+import { FooterInfo } from '../components/FooterInfo';
 import { HeaderBar, headerTitles } from '../components/HeaderBar';
+import { SeparateLine } from '../components/SeparateLine';
 import { blogClient, Post } from '../lib/blog-client';
 import { revalidateSeconds } from '../lib/isr-settings';
 
@@ -10,9 +12,15 @@ const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <HeaderBar headerTitle={headerTitles.blog} />
-      <main className="my-10 mx-8">
+      <main className="mt-10 mb-4 mx-8">
         <BlogPostList posts={posts} />
+        <div className="mt-4">
+          <SeparateLine />
+        </div>
       </main>
+      <footer className="flex justify-center">
+        <FooterInfo />
+      </footer>
     </>
   );
 };
