@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { About } from '../components/About';
+import { FooterInfo } from '../components/FooterInfo';
 import { FooterLink } from '../components/FooterLink';
 import { HeaderBar, headerTitles } from '../components/HeaderBar';
 import { SeparateLine } from '../components/SeparateLine';
@@ -9,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <>
       <HeaderBar headerTitle={headerTitles.about} />
-      <main className="mx-20 my-10 h-screen">
+      <main className="mx-20 my-10">
         <div className="sm:mx-16 md:mx-32 lg:mx-64 my-8">
           <About />
         </div>
@@ -18,10 +19,13 @@ const Home: NextPage = () => {
           <Skill />
         </div>
         <SeparateLine />
-        <footer className="my-8">
-          <FooterLink />
-        </footer>
       </main>
+      <footer className="my-8">
+        <FooterLink />
+        <div className="mt-6 flex justify-center">
+          <FooterInfo />
+        </div>
+      </footer>
     </>
   );
 };

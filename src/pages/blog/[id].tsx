@@ -3,7 +3,9 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import { FooterInfo } from '../../components/FooterInfo';
 import { HeaderBar, headerTitles } from '../../components/HeaderBar';
+import { SeparateLine } from '../../components/SeparateLine';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJstDate } from '../../lib/date-util';
 import { revalidateSeconds } from '../../lib/isr-settings';
@@ -46,7 +48,13 @@ const BlogId: NextPage<Props> = ({ post }) => {
             className="post"
           />
         </article>
+        <div className="mt-4">
+          <SeparateLine />
+        </div>
       </main>
+      <footer className="flex justify-center">
+        <FooterInfo />
+      </footer>
     </>
   );
 };
