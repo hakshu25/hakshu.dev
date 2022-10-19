@@ -18,7 +18,7 @@ export const HeaderBar = ({ headerTitle }: Props) => {
         Hakshu&apos;s Portfolio
       </div>
       <nav className="row-start-1 col-start-12 sm:col-start-11 sm:col-span-2">
-        <ul className="list-none grid grid-cols-2 place-items-end">
+        <ul className="list-none grid grid-cols-3 place-items-end">
           <li>
             <Link href="/" passHref={true}>
               About
@@ -28,6 +28,11 @@ export const HeaderBar = ({ headerTitle }: Props) => {
             <Link href="/blog" passHref={true} prefetch={false}>
               Blog
             </Link>
+          </li>
+          <li>
+            <a href="/rss" target="_blank" rel="noopener noreferrer">
+              RSS
+            </a>
           </li>
         </ul>
       </nav>
