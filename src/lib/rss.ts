@@ -9,7 +9,7 @@ export function generateRssXml(posts: Post[], siteUrl: string) {
     link: siteUrl,
     language: 'ja',
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: 'コピーライト',
+    copyright: '© 2022 hakshu',
     author: {
       name: 'hakshu',
       link: siteUrl,

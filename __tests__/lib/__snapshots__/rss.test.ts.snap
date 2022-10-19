@@ -11,7 +11,7 @@ exports[`Rss generateRssXml() フィードを生成する 1`] = `
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
-        <copyright>コピーライト</copyright>
+        <copyright>© 2022 hakshu</copyright>
         <item>
             <title><![CDATA[ブログ1]]></title>
             <link>http://localhost:3000/test/blog/2sef2d</link>
