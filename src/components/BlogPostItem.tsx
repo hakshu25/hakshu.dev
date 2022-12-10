@@ -8,14 +8,19 @@ type Props = {
 };
 
 export const BlogPostItem = ({ post }: Props) => {
+  const imageSize = {
+    width: 370,
+    height: 224,
+  };
+
   return (
     <Link href={`/blog/${post.id}`} passHref={true} prefetch={false}>
       <div className="hover:cursor-pointer">
         <Image
-          src={post.image.url}
+          src={`${post.image.url}?fit=scale&w=${imageSize.width}&h=${imageSize.height}`}
           alt="Picture of article"
-          width={370}
-          height={224}
+          width={imageSize.width}
+          height={imageSize.height}
           className="rounded-md"
         ></Image>
         <div className="mt-2 mb-2 text-xl text-dark">
