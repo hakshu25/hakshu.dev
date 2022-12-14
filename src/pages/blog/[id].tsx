@@ -1,6 +1,7 @@
 import hljs from 'highlight.js';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import { FooterInfo } from '../../components/FooterInfo';
@@ -9,6 +10,7 @@ import { SeparateLine } from '../../components/SeparateLine';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJstDate } from '../../lib/date-util';
 import { revalidateSeconds } from '../../lib/isr-settings';
+import { siteUrl } from '../../lib/site-url';
 import Custom404 from '../404';
 
 type Props = { post: Post };
@@ -26,6 +28,12 @@ const BlogId: NextPage<Props> = ({ post }) => {
 
   return (
     <>
+      <Head>
+        <meta
+          property="og:image"
+          content={`${siteUrl}/api/og?title=${post.title}`}
+        />
+      </Head>
       <HeaderBar headerTitle={headerTitles.blog} />
       <main className="my-8 mx-10">
         <article>
