@@ -37,10 +37,7 @@ const BlogId: NextPage<Props> = ({ post }) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${post.title}`} />
         <meta property="og:description" content={`${ogDescription}`} />
-        <meta
-          property="og:image"
-          content={`${siteUrl}/api/og?title=${post.title}`}
-        />
+        <meta property="og:image" content={`${post.image.url}`} />
       </Head>
       <HeaderBar headerTitle={headerTitles.blog} />
       <main className="my-8 mx-10">
