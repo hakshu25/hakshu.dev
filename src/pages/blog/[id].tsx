@@ -26,9 +26,17 @@ const BlogId: NextPage<Props> = ({ post }) => {
     return <Custom404 />;
   }
 
+  const ogDescription = post.body
+    .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
+    .slice(0, 100);
+
   return (
     <>
       <Head>
+        <meta property="og:url" content={`${siteUrl}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${post.title}`} />
+        <meta property="og:description" content={`${ogDescription}`} />
         <meta
           property="og:image"
           content={`${siteUrl}/api/og?title=${post.title}`}
