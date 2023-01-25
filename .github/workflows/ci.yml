@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: 'Asia/Tokyo'
+      NEXT_PUBLIC_VERCEL_URL: 'http://localhost:3000'
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v3

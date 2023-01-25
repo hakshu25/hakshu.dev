@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import { FooterInfo } from '../../components/FooterInfo';
 import { HeaderBar, headerTitles } from '../../components/HeaderBar';
+import { Ogp } from '../../components/Ogp';
 import { SeparateLine } from '../../components/SeparateLine';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJstDate } from '../../lib/date-util';
@@ -24,8 +25,18 @@ const BlogId: NextPage<Props> = ({ post }) => {
     return <Custom404 />;
   }
 
+  const ogDescription = post.body
+    .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
+    .slice(0, 100);
+
   return (
     <>
+      <Ogp
+        pageType="article"
+        title={post.title}
+        description={ogDescription}
+        imageUrl={post.image.url}
+      />
       <HeaderBar headerTitle={headerTitles.blog} />
       <main className="my-8 mx-10">
         <article>

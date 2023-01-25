@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { siteTitle } from '../lib/site-info';
 
 export const headerTitles = {
   about: 'About',
@@ -14,9 +15,7 @@ type Props = {
 export const HeaderBar = ({ headerTitle }: Props) => {
   return (
     <header className="bg-midnight h-60 text-white px-4 pt-2 grid grid-cols-12 grid-rows-3">
-      <div className="text-2xl col-start-1 col-span-4">
-        Hakshu&apos;s Portfolio
-      </div>
+      <div className="text-2xl col-start-1 col-span-4">{siteTitle}</div>
       <nav className="row-start-1 col-start-12 sm:col-start-11 sm:col-span-2">
         <ul className="list-none grid grid-cols-3 place-items-end">
           <li>

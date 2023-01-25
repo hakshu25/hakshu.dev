@@ -11,11 +11,12 @@
     "prettier:fix": "prettier --write .",
     "stylelint": "stylelint 'src/styles/*'",
     "stylelint:fix": "stylelint 'src/styles/*' --fix",
-    "test": "jest --watch",
+    "test": "NODE_ENV=test jest --watch",
     "test:ci": "jest --ci",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@vercel/og": "0.0.21",
     "feed": "4.2.2",
     "highlight.js": "11.7.0",
     "microcms-js-sdk": "2.3.2",
