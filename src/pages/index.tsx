@@ -10,7 +10,7 @@ import { Skill } from '../components/Skill';
 const Home: NextPage = () => {
   return (
     <>
-      <CommonMeta />
+      <CommonMeta pageType="website" />
       <HeaderBar headerTitle={headerTitles.about} />
       <main className="mx-20 my-10">
         <div className="sm:mx-16 md:mx-32 lg:mx-64 my-8">

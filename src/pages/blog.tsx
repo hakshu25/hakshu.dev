@@ -12,7 +12,7 @@ type Props = { posts: Post[] };
 const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <>
-      <CommonMeta />
+      <CommonMeta pageType="blog" />
       <HeaderBar headerTitle={headerTitles.blog} />
       <main className="mt-10 mb-4 mx-8">
         <BlogPostList posts={posts} />
