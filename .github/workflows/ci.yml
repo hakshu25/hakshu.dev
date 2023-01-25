@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: 'Asia/Tokyo'
+      NEXT_PUBLIC_SITE_URL: 'http://localhost:3000'
 
     strategy:
       matrix:

@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import { siteUrl } from '../lib/site-url';
 
-type PageType = 'website' | 'blog' | 'article';
+export type PageType = 'website' | 'blog' | 'article';
 interface Props {
   pageType: PageType;
   title?: string;
@@ -22,14 +22,23 @@ export const Ogp: NextPage<Props> = ({
 }) => {
   return (
     <Head>
-      <meta property="og:url" content={siteUrl} />
-      <meta property="og:type" content={pageType} />
-      <meta property="og:title" content={title ?? defaultTitle} />
+      <meta property="og:url" content={siteUrl} data-testid="og-url" />
+      <meta property="og:type" content={pageType} data-testid="og-type" />
+      <meta
+        property="og:title"
+        content={title ?? defaultTitle}
+        data-testid="og-title"
+      />
       <meta
         property="og:description"
         content={description ?? defaultDescription}
+        data-testid="og-description"
       />
-      <meta property="og:image" content={imageUrl ?? defaultImageUrl} />
+      <meta
+        property="og:image"
+        content={imageUrl ?? defaultImageUrl}
+        data-testid="og-image"
+      />
     </Head>
   );
 };
