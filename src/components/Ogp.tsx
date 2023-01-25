@@ -14,7 +14,7 @@ const defaultTitle = "Hakshu's Portfolio";
 const defaultDescription = 'Webエンジニアhakshuのポートフォリオ';
 const defaultImageUrl = `${siteUrl}/api/og`;
 
-export const CommonMeta: NextPage<Props> = ({
+export const Ogp: NextPage<Props> = ({
   pageType,
   title,
   description,

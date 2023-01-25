@@ -3,9 +3,9 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { CommonMeta } from '../../components/CommonMeta';
 import { FooterInfo } from '../../components/FooterInfo';
 import { HeaderBar, headerTitles } from '../../components/HeaderBar';
+import { Ogp } from '../../components/Ogp';
 import { SeparateLine } from '../../components/SeparateLine';
 import { blogClient, Post } from '../../lib/blog-client';
 import { formatUtcDateTimeToJstDate } from '../../lib/date-util';
@@ -31,7 +31,7 @@ const BlogId: NextPage<Props> = ({ post }) => {
 
   return (
     <>
-      <CommonMeta
+      <Ogp
         pageType="article"
         title={post.title}
         description={ogDescription}
