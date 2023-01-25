@@ -15,17 +15,20 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-      - run: yarn --frozen-lockfile
-      - run: yarn lint
-      - run: yarn stylelint
-      - run: yarn prettier
-      - run: yarn test:ci
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm stylelint
+      - run: pnpm prettier
+      - run: pnpm test:ci
