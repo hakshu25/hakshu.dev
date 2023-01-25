@@ -2,7 +2,7 @@ import { ImageResponse } from '@vercel/og';
 import { siteTitle } from '../../lib/site-info';
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 };
 
 export default function handler() {
