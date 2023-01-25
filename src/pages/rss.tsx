@@ -1,7 +1,7 @@
 import { GetServerSidePropsContext } from 'next';
 import { blogClient } from '../lib/blog-client';
 import { generateRssXml } from '../lib/rss';
-import { siteUrl } from '../lib/site-url';
+import { siteUrl } from '../lib/site-info';
 
 export const getServerSideProps = async ({
   res,

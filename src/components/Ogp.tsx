@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { siteTitle } from '../lib/site-info';
-import { siteUrl } from '../lib/site-url';
+import { siteUrl } from '../lib/site-info';
 
 export type PageType = 'website' | 'blog' | 'article';
 interface Props {
