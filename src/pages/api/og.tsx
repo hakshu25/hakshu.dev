@@ -1,11 +1,11 @@
 import { ImageResponse } from '@vercel/og';
+import { siteTitle } from '../../lib/site-info';
 
 export const config = {
   runtime: 'experimental-edge',
 };
 
 export default function handler() {
-  const title = "Hakshu's Portfolio";
   return new ImageResponse(
     (
       <div
@@ -21,7 +21,7 @@ export default function handler() {
           justifyContent: 'center',
         }}
       >
-        {title}
+        {siteTitle}
       </div>
     ),
     {
