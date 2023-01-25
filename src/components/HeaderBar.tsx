@@ -9,7 +9,7 @@ export const headerTitles = {
 
 type HeaderTitleKey = keyof typeof headerTitles;
 type Props = {
-  headerTitle: typeof headerTitles[HeaderTitleKey];
+  headerTitle: (typeof headerTitles)[HeaderTitleKey];
 };
 
 export const HeaderBar = ({ headerTitle }: Props) => {
