@@ -1,3 +1,4 @@
 package.json
 .next
 .husky
+pnpm-lock.yaml
