@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { About } from '../components/About';
 import { FooterInfo } from '../components/FooterInfo';
 import { FooterLink } from '../components/FooterLink';
-import { HeaderBar, headerTitles } from '../components/HeaderBar';
+import { Header } from '../components/Header';
 import { Ogp } from '../components/Ogp';
 import { SeparateLine } from '../components/SeparateLine';
 import { Skill } from '../components/Skill';
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Ogp pageType="website" />
-      <HeaderBar headerTitle={headerTitles.about} />
+      <Header />
       <main className="mx-20 my-10">
         <div className="sm:mx-16 md:mx-32 lg:mx-64 my-8">
           <About />

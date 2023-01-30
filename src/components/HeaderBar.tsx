@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { siteTitle } from '../lib/site-info';
 
@@ -7,17 +8,15 @@ export const headerTitles = {
   error: 'Error',
 } as const;
 
-type HeaderTitleKey = keyof typeof headerTitles;
-type Props = {
-  headerTitle: (typeof headerTitles)[HeaderTitleKey];
-};
-
-export const HeaderBar = ({ headerTitle }: Props) => {
+export const HeaderBar = () => {
   return (
-    <header className="bg-midnight h-60 text-white px-4 pt-2 grid grid-cols-12 grid-rows-3">
-      <div className="text-2xl col-start-1 col-span-4">{siteTitle}</div>
-      <nav className="row-start-1 col-start-12 sm:col-start-11 sm:col-span-2">
-        <ul className="list-none grid grid-cols-3 place-items-end">
+    <div className="bg-midnight h-16 text-white px-4 py-4 flex justify-between">
+      <div className="text-2xl flex flex-1 items-center gap-2">
+        <Image src="/img/header-icon.png" alt="icon" width={40} height={40} />
+        <span>{siteTitle}</span>
+      </div>
+      <nav>
+        <ul className="list-none flex gap-4">
           <li>
             <Link href="/" passHref={true}>
               About
@@ -35,9 +34,6 @@ export const HeaderBar = ({ headerTitle }: Props) => {
           </li>
         </ul>
       </nav>
-      <h1 className="text-7xl font-bold text-center row-start-2 col-span-12">
-        {headerTitle}
-      </h1>
-    </header>
+    </div>
   );
 };
