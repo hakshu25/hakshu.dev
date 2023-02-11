@@ -27,7 +27,7 @@ specifiers:
   react-test-renderer: 18.2.0
   sass: 1.58.0
   stylelint: 14.16.1
-  stylelint-config-prettier: 9.0.4
+  stylelint-config-prettier: 9.0.5
   stylelint-config-sass-guidelines: 9.0.1
   stylelint-config-standard: 29.0.0
   tailwindcss: 3.2.4
@@ -62,7 +62,7 @@ devDependencies:
   prettier: 2.8.4
   react-test-renderer: 18.2.0_react@18.2.0
   stylelint: 14.16.1
-  stylelint-config-prettier: 9.0.4_stylelint@14.16.1
+  stylelint-config-prettier: 9.0.5_stylelint@14.16.1
   stylelint-config-sass-guidelines: 9.0.1_w5gtdy6oq4ictd5o4eu6befejy
   stylelint-config-standard: 29.0.0_stylelint@14.16.1
   tailwindcss: 3.2.4_postcss@8.4.21
@@ -5213,12 +5213,12 @@ packages:
       react: 18.2.0
     dev: false
 
-  /stylelint-config-prettier/9.0.4_stylelint@14.16.1:
-    resolution: {integrity: sha512-38nIGTGpFOiK5LjJ8Ma1yUgpKENxoKSOhbDNSemY7Ep0VsJoXIW9Iq/2hSt699oB9tReynfWicTAoIHiq8Rvbg==}
+  /stylelint-config-prettier/9.0.5_stylelint@14.16.1:
+    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
     engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
-      stylelint: '>=11.0.0'
+      stylelint: '>= 11.x < 15'
     dependencies:
       stylelint: 14.16.1
     dev: true
