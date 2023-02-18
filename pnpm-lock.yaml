@@ -25,7 +25,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-test-renderer: 18.2.0
-  sass: 1.58.0
+  sass: 1.58.3
   stylelint: 14.16.1
   stylelint-config-prettier: 9.0.5
   stylelint-config-sass-guidelines: 9.0.1
@@ -38,10 +38,10 @@ dependencies:
   feed: 4.2.2
   highlight.js: 11.7.0
   microcms-js-sdk: 2.3.2
-  next: 13.1.6_5mhhrw5dq6gnbuirj2awdzvyuu
+  next: 13.1.6_wiv434v7erz4aedd5whhdwmpv4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  sass: 1.58.0
+  sass: 1.58.3
 
 devDependencies:
   '@testing-library/jest-dom': 5.16.5
@@ -4142,7 +4142,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next/13.1.6_5mhhrw5dq6gnbuirj2awdzvyuu:
+  /next/13.1.6_wiv434v7erz4aedd5whhdwmpv4:
     resolution: {integrity: sha512-hHlbhKPj9pW+Cymvfzc15lvhaOZ54l+8sXDXJWm3OBNBzgrVj6hwGPmqqsXg40xO1Leq+kXpllzRPuncpC0Phw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -4166,7 +4166,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      sass: 1.58.0
+      sass: 1.58.3
       styled-jsx: 5.1.1_react@18.2.0
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.1.6
@@ -4912,8 +4912,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass/1.58.0:
-    resolution: {integrity: sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==}
+  /sass/1.58.3:
+    resolution: {integrity: sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
