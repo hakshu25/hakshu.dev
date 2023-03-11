@@ -27,7 +27,6 @@ specifiers:
   react-test-renderer: 18.2.0
   sass: 1.59.2
   stylelint: 15.2.0
-  stylelint-config-prettier: 9.0.5
   stylelint-config-sass-guidelines: 9.0.1
   stylelint-config-standard: 30.0.1
   tailwindcss: 3.2.7
@@ -62,7 +61,6 @@ devDependencies:
   prettier: 2.8.4
   react-test-renderer: 18.2.0_react@18.2.0
   stylelint: 15.2.0
-  stylelint-config-prettier: 9.0.5_stylelint@15.2.0
   stylelint-config-sass-guidelines: 9.0.1_xczz5gvex7qa2pnzrs7ducdpai
   stylelint-config-standard: 30.0.1_stylelint@15.2.0
   tailwindcss: 3.2.7_postcss@8.4.21
@@ -5305,16 +5303,6 @@ packages:
       client-only: 0.0.1
       react: 18.2.0
     dev: false
-
-  /stylelint-config-prettier/9.0.5_stylelint@15.2.0:
-    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    peerDependencies:
-      stylelint: '>= 11.x < 15'
-    dependencies:
-      stylelint: 15.2.0
-    dev: true
 
   /stylelint-config-recommended/10.0.1_stylelint@15.2.0:
     resolution: {integrity: sha512-TQ4xQ48tW4QSlODcti7pgSRqBZcUaBzuh0jPpfiMhwJKBPkqzTIAU+IrSWL/7BgXlOM90DjB7YaNgFpx8QWhuA==}
