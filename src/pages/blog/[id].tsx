@@ -16,7 +16,7 @@ type Props = { post: Post };
 
 const BlogId: NextPage<Props> = ({ post }) => {
   useEffect(() => {
-    hljs.configure({ languages: ['bash', 'js', 'ts', 'html', 'css', 'scss'] });
+    hljs.configure({ languages: ['bash', 'js', 'ts', 'html', 'css'] });
     hljs.highlightAll();
   });
 
