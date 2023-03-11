@@ -6,7 +6,7 @@ specifiers:
   '@types/react': 18.0.28
   '@typescript-eslint/eslint-plugin': 5.54.1
   '@typescript-eslint/parser': 5.54.1
-  '@vercel/og': 0.3.0
+  '@vercel/og': 0.4.0
   autoprefixer: 10.4.14
   eslint: 8.36.0
   eslint-config-next: 13.2.4
@@ -34,7 +34,7 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
-  '@vercel/og': 0.3.0
+  '@vercel/og': 0.4.0
   feed: 4.2.2
   highlight.js: 11.7.0
   microcms-js-sdk: 2.3.2
@@ -1293,8 +1293,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/og/0.3.0:
-    resolution: {integrity: sha512-0L7tAgyLJWv2jdCg7NQtoWOs+ZK+pYeJBev3r1Y8apHjcu7Qj/OfR65JlAPfTMH8b6iUpVtBeHWVUo5KAhaC2A==}
+  /@vercel/og/0.4.0:
+    resolution: {integrity: sha512-FFjXYCD5ZM0VotC9niy11qf4m6D99JVQ73P/uCLJl/r2PeOj0l26xwTEQ4HHJ/yZ6ncByCNoWAjk+S0fjMJmwg==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.4.1
