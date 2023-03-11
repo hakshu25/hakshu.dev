@@ -1,5 +1,5 @@
-import '../styles/globals.scss';
-import 'highlight.js/scss/atom-one-dark.scss';
+import '../styles/globals.css';
+import 'highlight.js/styles/atom-one-dark.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
