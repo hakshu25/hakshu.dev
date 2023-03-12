@@ -49,7 +49,9 @@ const BlogId: NextPage<Props> = ({ post }) => {
               src={post.image.url}
               alt="Picture of article"
               className="rounded-md"
-              layout="fill"
+              fill
+              sizes="100%"
+              priority
             ></Image>
           </div>
           <div
