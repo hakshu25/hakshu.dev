@@ -11,6 +11,7 @@ export const headerTitles = {
 const pageTitles = {
   about: siteTitle,
   blog: "Hakshu's Blog",
+  error: 'Error Page',
 } as const;
 type PageTitleType = keyof typeof pageTitles;
 

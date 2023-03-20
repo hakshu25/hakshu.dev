@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
-import { HeaderBar, headerTitles } from '../components/HeaderBar';
+import { ErrorHeader } from '../components/ErrorHeader';
 
 const Custom404: NextPage = () => {
   return (
     <>
-      <HeaderBar headerTitle={headerTitles.error} />
+      <ErrorHeader />
       <main className="mt-4 ml-4">
         <p>ページが見つかりません。</p>
       </main>
