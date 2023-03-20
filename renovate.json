@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>flyhighair/renovate-config"],
+  "extends": ["github>flyhighair/renovate-config"],
   "packageRules": [
     {
       "groupName": "eslint packages",
