@@ -2,12 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { siteTitle } from '../lib/site-info';
 
-export const headerTitles = {
-  about: 'About',
-  blog: 'Blog',
-  error: 'Error',
-} as const;
-
 const pageTitles = {
   about: siteTitle,
   blog: "Hakshu's Blog",
