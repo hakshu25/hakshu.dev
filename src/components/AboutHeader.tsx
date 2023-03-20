@@ -1,7 +1,7 @@
 import { HeaderBar } from './HeaderBar';
 import { HeaderImage } from './HeaderImage';
 
-export const Header = () => {
+export const AboutHeader = () => {
   return (
     <header>
       <HeaderBar />
