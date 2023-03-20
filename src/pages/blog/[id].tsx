@@ -3,8 +3,8 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import { BlogHeader } from '../../components/BlogHeader';
 import { FooterInfo } from '../../components/FooterInfo';
-import { HeaderBar, headerTitles } from '../../components/HeaderBar';
 import { Ogp } from '../../components/Ogp';
 import { SeparateLine } from '../../components/SeparateLine';
 import { blogClient, Post } from '../../lib/blog-client';
@@ -37,7 +37,7 @@ const BlogId: NextPage<Props> = ({ post }) => {
         description={ogDescription}
         imageUrl={post.image.url}
       />
-      <HeaderBar headerTitle={headerTitles.blog} />
+      <BlogHeader />
       <main className="my-8 mx-10">
         <article>
           <h1 className="text-dark text-6xl font-bold mb-4">{post.title}</h1>

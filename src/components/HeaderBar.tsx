@@ -8,12 +8,22 @@ export const headerTitles = {
   error: 'Error',
 } as const;
 
-export const HeaderBar = () => {
+const pageTitles = {
+  about: siteTitle,
+  blog: "Hakshu's Blog",
+} as const;
+type PageTitleType = keyof typeof pageTitles;
+
+type Props = {
+  type?: PageTitleType;
+};
+
+export const HeaderBar = ({ type = 'about' }: Props) => {
   return (
     <div className="bg-midnight h-16 text-white px-4 py-4 flex justify-between">
       <div className="text-2xl flex flex-1 items-center gap-2">
         <Image src="/img/header-icon.png" alt="icon" width={40} height={40} />
-        <span>{siteTitle}</span>
+        <span>{pageTitles[type]}</span>
       </div>
       <nav>
         <ul className="list-none flex gap-4">
