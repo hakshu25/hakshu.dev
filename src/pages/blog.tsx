@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
+import { BlogHeader } from '../components/BlogHeader';
 import { BlogPostList } from '../components/BlogPostList';
 import { FooterInfo } from '../components/FooterInfo';
-import { HeaderBar, headerTitles } from '../components/HeaderBar';
 import { Ogp } from '../components/Ogp';
 import { SeparateLine } from '../components/SeparateLine';
 import { blogClient, Post } from '../lib/blog-client';
@@ -13,7 +13,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Ogp pageType="blog" />
-      <HeaderBar headerTitle={headerTitles.blog} />
+      <BlogHeader />
       <main className="mt-10 mb-4 mx-8">
         <BlogPostList posts={posts} />
         <div className="mt-4">
