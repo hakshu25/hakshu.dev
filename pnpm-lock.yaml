@@ -23,7 +23,7 @@ specifiers:
   microcms-js-sdk: 2.3.2
   next: 13.2.4
   postcss: 8.4.21
-  prettier: 2.8.4
+  prettier: 2.8.7
   react: 18.2.0
   react-dom: 18.2.0
   react-test-renderer: 18.2.0
@@ -59,7 +59,7 @@ devDependencies:
   jest-environment-jsdom: 29.5.0
   lint-staged: 13.2.0
   postcss: 8.4.21
-  prettier: 2.8.4
+  prettier: 2.8.7
   react-test-renderer: 18.2.0_react@18.2.0
   stylelint: 15.3.0
   stylelint-config-standard: 31.0.0_stylelint@15.3.0
@@ -4677,8 +4677,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier/2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
