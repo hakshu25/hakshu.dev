@@ -8,7 +8,7 @@ specifiers:
   '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.56.0
   '@typescript-eslint/parser': 5.56.0
-  '@vercel/og': 0.4.0
+  '@vercel/og': 0.4.1
   autoprefixer: 10.4.14
   eslint: 8.36.0
   eslint-config-next: 13.2.4
@@ -33,7 +33,7 @@ specifiers:
   typescript: 5.0.2
 
 dependencies:
-  '@vercel/og': 0.4.0
+  '@vercel/og': 0.4.1
   feed: 4.2.2
   highlight.js: 11.7.0
   microcms-js-sdk: 2.3.2
@@ -1312,8 +1312,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/og/0.4.0:
-    resolution: {integrity: sha512-FFjXYCD5ZM0VotC9niy11qf4m6D99JVQ73P/uCLJl/r2PeOj0l26xwTEQ4HHJ/yZ6ncByCNoWAjk+S0fjMJmwg==}
+  /@vercel/og/0.4.1:
+    resolution: {integrity: sha512-N8SXkbmQQRK0iHpqwUe50Fe8JO3sx2ByV6hgPTi16ONiMdqOM9uzE4QMWoY1Oa0uYZuUVA30sEB84mVMn+gT3w==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.4.1
