@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>flyhighair/renovate-config"],
+  "extends": ["github>flyhighair/renovate-config"],
   "packageRules": [
     {
       "groupName": "eslint packages",
@@ -9,6 +9,14 @@
     {
       "groupName": "stylelint packages",
       "matchPackagePatterns": ["^stylelint"]
+    },
+    {
+      "groupName": "react packages",
+      "matchPackagePatterns": ["^react", "^@types/react", "^@types/react-dom"]
+    },
+    {
+      "groupName": "test packages",
+      "matchPackagePatterns": ["^jest", "^@types/jest", "^@testing-library/"]
     }
   ]
 }
