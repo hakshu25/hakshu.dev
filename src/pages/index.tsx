@@ -2,6 +2,7 @@ import { GetStaticProps, NextPage } from 'next';
 import { BlogHeader } from '../components/BlogHeader';
 import { BlogPostList } from '../components/BlogPostList';
 import { FooterInfo } from '../components/FooterInfo';
+import { FooterLink } from '../components/FooterLink';
 import { Ogp } from '../components/Ogp';
 import { SeparateLine } from '../components/SeparateLine';
 import { blogClient, Post } from '../lib/blog-client';
@@ -20,8 +21,11 @@ const Home: NextPage<Props> = ({ posts }) => {
           <SeparateLine />
         </div>
       </main>
-      <footer className="flex justify-center">
-        <FooterInfo />
+      <footer className="my-8 w-80 mx-auto">
+        <FooterLink />
+        <div className="mt-6 flex justify-center">
+          <FooterInfo />
+        </div>
       </footer>
     </>
   );
