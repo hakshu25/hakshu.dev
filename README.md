@@ -1,3 +1,3 @@
 # hakshu.dev
 
-hakshu の公式サイト+ブログサイト
+hakshu のブログサイト
