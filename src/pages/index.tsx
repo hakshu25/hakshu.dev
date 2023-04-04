@@ -1,35 +1,41 @@
-import type { NextPage } from 'next';
-import { About } from '../components/About';
-import { AboutHeader } from '../components/AboutHeader';
+import { GetStaticProps, NextPage } from 'next';
+import { BlogHeader } from '../components/BlogHeader';
+import { BlogPostList } from '../components/BlogPostList';
 import { FooterInfo } from '../components/FooterInfo';
-import { FooterLink } from '../components/FooterLink';
 import { Ogp } from '../components/Ogp';
 import { SeparateLine } from '../components/SeparateLine';
-import { Skill } from '../components/Skill';
+import { blogClient, Post } from '../lib/blog-client';
+import { revalidateSeconds } from '../lib/isr-settings';
 
-const Home: NextPage = () => {
+type Props = { posts: Post[] };
+
+const Home: NextPage<Props> = ({ posts }) => {
   return (
     <>
-      <Ogp pageType="website" />
-      <AboutHeader />
-      <main className="mx-20 my-10">
-        <div className="sm:mx-16 md:mx-32 lg:mx-64 my-8">
-          <About />
+      <Ogp pageType="blog" />
+      <BlogHeader />
+      <main className="mt-10 mb-4 mx-8">
+        <BlogPostList posts={posts} />
+        <div className="mt-4">
+          <SeparateLine />
         </div>
-        <SeparateLine />
-        <div className="sm:mx-16 md:mx-32 lg:mx-64 my-8">
-          <Skill />
-        </div>
-        <SeparateLine />
       </main>
-      <footer className="my-8">
-        <FooterLink />
-        <div className="mt-6 flex justify-center">
-          <FooterInfo />
-        </div>
+      <footer className="flex justify-center">
+        <FooterInfo />
       </footer>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { contents } = await blogClient.get({ endpoint: 'posts' });
+
+  return {
+    props: {
+      posts: contents,
+    },
+    revalidate: revalidateSeconds,
+  };
 };
 
 export default Home;
