@@ -9,6 +9,14 @@
     {
       "groupName": "stylelint packages",
       "matchPackagePatterns": ["^stylelint"]
+    },
+    {
+      "groupName": "react packages",
+      "matchPackagePatterns": ["^react", "^@types/react", "^@types/react-dom"]
+    },
+    {
+      "groupName": "test packages",
+      "matchPackagePatterns": ["^jest", "^@types/jest", "^@testing-library/"]
     }
   ]
 }
