@@ -5,7 +5,7 @@ class CustomDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <meta name="description" content="Hakshu's WebSite and blog" />
+          <meta name="description" content="Hakshu's blog" />
           <link rel="icon" href="/img/icon.webp" />
           <link
             rel="stylesheet"

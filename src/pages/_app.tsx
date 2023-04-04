@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const title = "Hakshu's Website";
+  const title = "Hakshu's Blog";
 
   return (
     <>

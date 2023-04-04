@@ -14,8 +14,8 @@ exports[`Rss generateRssXml() フィードを生成する 1`] = `
         <copyright>© 2022 hakshu</copyright>
         <item>
             <title><![CDATA[ブログ1]]></title>
-            <link>http://localhost:3000/test/blog/2sef2d</link>
-            <guid>http://localhost:3000/test/blog/2sef2d</guid>
+            <link>http://localhost:3000/test/2sef2d</link>
+            <guid>http://localhost:3000/test/2sef2d</guid>
             <pubDate>Sat, 25 Jun 2022 08:13:48 GMT</pubDate>
             <description><![CDATA[ブログ1]]></description>
             <content:encoded><![CDATA[ブログ1の中身]]></content:encoded>
@@ -23,8 +23,8 @@ exports[`Rss generateRssXml() フィードを生成する 1`] = `
         </item>
         <item>
             <title><![CDATA[ブログ2]]></title>
-            <link>http://localhost:3000/test/blog/3ldjsf</link>
-            <guid>http://localhost:3000/test/blog/3ldjsf</guid>
+            <link>http://localhost:3000/test/3ldjsf</link>
+            <guid>http://localhost:3000/test/3ldjsf</guid>
             <pubDate>Thu, 25 Aug 2022 08:13:48 GMT</pubDate>
             <description><![CDATA[ブログ2]]></description>
             <content:encoded><![CDATA[ブログ2の中身]]></content:encoded>

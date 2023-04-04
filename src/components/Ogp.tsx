@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { siteTitle } from '../lib/site-info';
 import { siteUrl } from '../lib/site-info';
 
-export type PageType = 'website' | 'blog' | 'article';
+export type PageType = 'blog' | 'article';
 interface Props {
   pageType: PageType;
   title?: string;
@@ -11,7 +11,7 @@ interface Props {
   imageUrl?: string;
 }
 
-const defaultDescription = 'Webエンジニアhakshuのポートフォリオ';
+const defaultDescription = 'Webエンジニアhakshuのブログ';
 const defaultImageUrl = `${siteUrl}/api/og`;
 
 export const Ogp: NextPage<Props> = ({

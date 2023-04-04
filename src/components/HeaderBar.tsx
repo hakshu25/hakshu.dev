@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { siteTitle } from '../lib/site-info';
 
 const pageTitles = {
-  about: siteTitle,
   blog: "Hakshu's Blog",
   error: 'Error Page',
 } as const;
@@ -13,7 +11,7 @@ type Props = {
   type?: PageTitleType;
 };
 
-export const HeaderBar = ({ type = 'about' }: Props) => {
+export const HeaderBar = ({ type = 'blog' }: Props) => {
   return (
     <div className="bg-midnight h-16 text-white px-4 py-4 flex justify-between">
       <div className="text-2xl flex flex-1 items-center gap-2">
@@ -23,12 +21,7 @@ export const HeaderBar = ({ type = 'about' }: Props) => {
       <nav>
         <ul className="list-none flex gap-4">
           <li>
-            <Link href="/" passHref={true}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog" passHref={true} prefetch={false}>
+            <Link href="/" passHref={true} prefetch={false}>
               Blog
             </Link>
           </li>

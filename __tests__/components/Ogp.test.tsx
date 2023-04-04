@@ -16,7 +16,7 @@ describe('Ogp', () => {
   });
 
   it('サイトのURLをog:urlに設定する', () => {
-    const { getByTestId } = render(<Ogp pageType="website" />, {
+    const { getByTestId } = render(<Ogp pageType="blog" />, {
       container: document.head,
     });
 
@@ -27,7 +27,6 @@ describe('Ogp', () => {
   });
 
   const testCases: [PageType, PageType][] = [
-    ['website', 'website'],
     ['blog', 'blog'],
     ['article', 'article'],
   ];
@@ -43,19 +42,16 @@ describe('Ogp', () => {
   );
 
   it('渡したtitleをog:titleに設定する', () => {
-    const { getByTestId } = render(
-      <Ogp pageType="website" title="test title" />,
-      {
-        container: document.head,
-      }
-    );
+    const { getByTestId } = render(<Ogp pageType="blog" title="test title" />, {
+      container: document.head,
+    });
 
     expect(getByTestId('og-title')).toHaveAttribute('content', 'test title');
   });
 
   it('渡したdescriptionをog:descriptionに設定する', () => {
     const { getByTestId } = render(
-      <Ogp pageType="website" description="test description" />,
+      <Ogp pageType="blog" description="test description" />,
       {
         container: document.head,
       }
@@ -69,7 +65,7 @@ describe('Ogp', () => {
 
   it('渡したimageUrlをog:imageに設定する', () => {
     const { getByTestId } = render(
-      <Ogp pageType="website" imageUrl="http://localhost:3000/image" />,
+      <Ogp pageType="blog" imageUrl="http://localhost:3000/image" />,
       {
         container: document.head,
       }
@@ -82,17 +78,14 @@ describe('Ogp', () => {
   });
 
   it('title, description, imageUrlは渡さないとデフォルト値が設定される', () => {
-    const { getByTestId } = render(<Ogp pageType="website" />, {
+    const { getByTestId } = render(<Ogp pageType="blog" />, {
       container: document.head,
     });
 
-    expect(getByTestId('og-title')).toHaveAttribute(
-      'content',
-      "Hakshu's Portfolio"
-    );
+    expect(getByTestId('og-title')).toHaveAttribute('content', "Hakshu's Blog");
     expect(getByTestId('og-description')).toHaveAttribute(
       'content',
-      'Webエンジニアhakshuのポートフォリオ'
+      'Webエンジニアhakshuのブログ'
     );
     expect(getByTestId('og-image')).toHaveAttribute(
       'content',
