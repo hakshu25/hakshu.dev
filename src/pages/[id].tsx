@@ -3,18 +3,18 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { BlogHeader } from '../../components/BlogHeader';
-import { FooterInfo } from '../../components/FooterInfo';
-import { Ogp } from '../../components/Ogp';
-import { SeparateLine } from '../../components/SeparateLine';
-import { blogClient, Post } from '../../lib/blog-client';
-import { formatUtcDateTimeToJstDate } from '../../lib/date-util';
-import { revalidateSeconds } from '../../lib/isr-settings';
-import Custom404 from '../404';
+import { BlogHeader } from '../components/BlogHeader';
+import { FooterInfo } from '../components/FooterInfo';
+import { Ogp } from '../components/Ogp';
+import { SeparateLine } from '../components/SeparateLine';
+import { blogClient, Post } from '../lib/blog-client';
+import { formatUtcDateTimeToJstDate } from '../lib/date-util';
+import { revalidateSeconds } from '../lib/isr-settings';
+import Custom404 from './404';
 
 type Props = { post: Post };
 
-const BlogId: NextPage<Props> = ({ post }) => {
+const Id: NextPage<Props> = ({ post }) => {
   useEffect(() => {
     hljs.configure({ languages: ['bash', 'js', 'ts', 'html', 'css'] });
     hljs.highlightAll();
@@ -78,7 +78,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       endpoint: 'posts',
     });
 
-    const paths = contents.map((content) => `/blog/${content.id}`);
+    const paths = contents.map((content) => `/${content.id}`);
     return { paths, fallback: 'blocking' };
   } catch (e) {
     console.error(e);
@@ -106,4 +106,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 };
 
-export default BlogId;
+export default Id;

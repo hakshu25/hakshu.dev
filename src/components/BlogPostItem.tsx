@@ -14,7 +14,7 @@ export const BlogPostItem = ({ post }: Props) => {
   };
 
   return (
-    <Link href={`/blog/${post.id}`} passHref={true} prefetch={false}>
+    <Link href={`/${post.id}`} passHref={true} prefetch={false}>
       <div className="hover:cursor-pointer">
         <Image
           src={`${post.image.url}?fit=scale&w=${imageSize.width}&h=${imageSize.height}`}

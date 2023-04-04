@@ -19,8 +19,8 @@ export function generateRssXml(posts: Post[], siteUrl: string) {
   posts.forEach((post) => {
     feed.addItem({
       title: post.title,
-      id: `${siteUrl}/blog/${post.id}`,
-      link: `${siteUrl}/blog/${post.id}`,
+      id: `${siteUrl}/${post.id}`,
+      link: `${siteUrl}/${post.id}`,
       description: post.title,
       content: post.body,
       date: new Date(post.publishedAt),
