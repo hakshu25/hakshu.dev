@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { Post, blogClient } from '../_lib/blog-client';
 import PostPage from './post-page';
 
@@ -23,9 +24,13 @@ export async function generateStaticParams() {
 }
 
 async function getPost(params: Params) {
-  const id = params.id;
-  const post = await blogClient.get({ endpoint: 'posts', contentId: id });
-  return post;
+  try {
+    const id = params.id;
+    const post = await blogClient.get({ endpoint: 'posts', contentId: id });
+    return post;
+  } catch (error) {
+    notFound();
+  }
 }
 
 export default async function Page({ params }: Props) {

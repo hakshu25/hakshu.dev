@@ -3,13 +3,7 @@
 import { useEffect } from 'react';
 import { ErrorHeader } from './_components/ErrorHeader';
 
-export default function GlobalError({
-  error,
-  reset,
-}: {
-  error: Error;
-  reset: () => void;
-}) {
+export default function GlobalError({ error }: { error: Error }) {
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -19,8 +13,7 @@ export default function GlobalError({
       <body>
         <ErrorHeader />
         <main className="mt-4 ml-4">
-          <p>エラーが起きました</p>
-          <button onClick={() => reset()}>Try again</button>
+          <p>エラーが起きました。メニューからトップに移動してください。</p>
         </main>
       </body>
     </html>
