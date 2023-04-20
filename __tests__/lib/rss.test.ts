@@ -1,5 +1,5 @@
-import { Post } from '../../src/lib/blog-client';
-import { generateRssXml } from '../../src/lib/rss';
+import { Post } from '../../app/_lib/blog-client';
+import { generateRssXml } from '../../app/_lib/rss';
 
 describe('Rss', () => {
   beforeAll(() => {
