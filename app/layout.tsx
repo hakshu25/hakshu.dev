@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     title: "Hakshu's Blog",
     description: 'Webエンジニアhakshuのブログ',
     siteName: "Hakshu's Blog",
-    images: [{ url: '/opengraph-image' }],
   },
 };
 
