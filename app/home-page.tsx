@@ -1,6 +1,6 @@
 'use client';
 
-import { Post } from '../src/lib/blog-client';
+import { Post } from '../app/_lib/blog-client';
 import { BlogHeader } from './_components/BlogHeader';
 import { BlogPostList } from './_components/BlogPostList';
 import { FooterInfo } from './_components/FooterInfo';

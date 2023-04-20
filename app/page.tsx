@@ -1,4 +1,4 @@
-import { blogClient } from '../src/lib/blog-client';
+import { blogClient } from './_lib/blog-client';
 import HomePage from './home-page';
 
 export const revalidate = 60;
