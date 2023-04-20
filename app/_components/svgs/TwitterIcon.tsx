@@ -1,4 +1,4 @@
-import { SvgProps } from '../../lib/svg-props';
+import { SvgProps } from '../../_lib/svg-props';
 
 export const TwitterIcon = (props: SvgProps) => (
   <svg viewBox="0 0 512 512" {...props}>

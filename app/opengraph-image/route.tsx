@@ -2,12 +2,10 @@ import { ImageResponse } from 'next/server';
 import { siteTitle } from '../_lib/site-info';
 
 export const runtime = 'edge';
-export const alt = 'ブログイメージ画像';
-export const size = {
+const size = {
   width: 1200,
   height: 600,
 };
-export const contentType = 'image/png';
 
 export async function GET() {
   return new ImageResponse(

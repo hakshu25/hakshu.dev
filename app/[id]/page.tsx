@@ -2,6 +2,14 @@ import { Metadata } from 'next';
 import { Post, blogClient } from '../_lib/blog-client';
 import PostPage from './post-page';
 
+type Params = {
+  id: string;
+};
+
+type Props = {
+  params: Params;
+};
+
 export const revalidate = 60;
 export const dynamicParams = true;
 
@@ -14,21 +22,18 @@ export async function generateStaticParams() {
   return paths;
 }
 
-type Params = {
-  id: string;
-};
-
-type Props = {
-  params: Params;
-};
-
 async function getPost(params: Params) {
   const id = params.id;
   const post = await blogClient.get({ endpoint: 'posts', contentId: id });
   return post;
 }
 
-export async function generateMetaData({ params }: Props): Promise<Metadata> {
+export default async function Page({ params }: Props) {
+  const post = await getPost(params);
+  return <PostPage post={post} />;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(params);
   const title = post.title;
   const description = post.body
@@ -49,9 +54,4 @@ export async function generateMetaData({ params }: Props): Promise<Metadata> {
       ],
     },
   };
-}
-
-export default async function Page({ params }: Props) {
-  const post = await getPost(params);
-  return <PostPage post={post} />;
 }
