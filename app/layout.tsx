@@ -1,7 +1,6 @@
 import './globals.css';
 import { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-import { siteUrl } from './_lib/site-info';
 
 export const metadata: Metadata = {
   title: "Hakshu's Blog",
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: siteUrl,
+    url: '/',
     title: "Hakshu's Blog",
     description: 'Webエンジニアhakshuのブログ',
     siteName: "Hakshu's Blog",
