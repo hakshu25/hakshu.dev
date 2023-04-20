@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Post } from '../lib/blog-client';
-import { formatUtcDateTimeToJstDate } from '../lib/date-util';
+import { Post } from '../_lib/blog-client';
+import { formatUtcDateTimeToJstDate } from '../_lib/date-util';
 
 type Props = {
   post: Post;

@@ -1,4 +1,4 @@
-import { SvgProps } from '../lib/svg-props';
+import { SvgProps } from '../_lib/svg-props';
 import { GitHubIcon } from './svgs/GitHubIcon';
 import { TwitterIcon } from './svgs/TwitterIcon';
 

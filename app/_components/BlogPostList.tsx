@@ -1,4 +1,4 @@
-import { Post } from '../lib/blog-client';
+import { Post } from '../_lib/blog-client';
 import { BlogPostItem } from './BlogPostItem';
 
 type Props = { posts: Post[] };
