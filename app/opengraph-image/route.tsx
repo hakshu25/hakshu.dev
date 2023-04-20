@@ -1,11 +1,15 @@
 import { ImageResponse } from 'next/server';
-import { siteTitle } from '../../lib/site-info';
+import { siteTitle } from '../_lib/site-info';
 
-export const config = {
-  runtime: 'edge',
+export const runtime = 'edge';
+export const alt = 'ブログイメージ画像';
+export const size = {
+  width: 1200,
+  height: 600,
 };
+export const contentType = 'image/png';
 
-export default function handler() {
+export async function GET() {
   return new ImageResponse(
     (
       <div
@@ -24,9 +28,6 @@ export default function handler() {
         {siteTitle}
       </div>
     ),
-    {
-      width: 1200,
-      height: 600,
-    }
+    size
   );
 }
