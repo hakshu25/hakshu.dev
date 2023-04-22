@@ -17,6 +17,10 @@
     {
       "groupName": "test packages",
       "matchPackagePatterns": ["^jest", "^@types/jest", "^@testing-library/"]
+    },
+    {
+      "groupName": "storybook packages",
+      "matchPackagePatterns": ["^@storybook"]
     }
   ]
 }
