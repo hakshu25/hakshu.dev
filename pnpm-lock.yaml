@@ -32,7 +32,7 @@ devDependencies:
     version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
   '@storybook/addon-styling':
     specifier: ^1.0.1
-    version: 1.0.1(@types/node@16.9.2)(postcss@8.4.22)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.0.4)(webpack@5.80.0)
+    version: 1.0.1(@types/node@16.9.2)(postcss@8.4.23)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.0.4)(webpack@5.80.0)
   '@storybook/blocks':
     specifier: ^7.0.6
     version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
@@ -2673,7 +2673,7 @@ packages:
       ts-dedent: 2.2.0
     dev: true
 
-  /@storybook/addon-styling@1.0.1(@types/node@16.9.2)(postcss@8.4.22)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.0.4)(webpack@5.80.0):
+  /@storybook/addon-styling@1.0.1(@types/node@16.9.2)(postcss@8.4.23)(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.0.4)(webpack@5.80.0):
     resolution: {integrity: sha512-ERi52/Rebk3HPQAA0Xnhd5Opl3Q4csX1yYkYKRa5vAKTKIX7n3YT6I5V5zasCdNHT5+LkJ5ZUJb4AQ5T/QPYRw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -2692,7 +2692,7 @@ packages:
       '@storybook/theming': 7.0.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/types': 7.0.6
       css-loader: 6.7.3(webpack@5.80.0)
-      postcss-loader: 7.2.4(@types/node@16.9.2)(postcss@8.4.22)(ts-node@10.9.1)(typescript@5.0.4)(webpack@5.80.0)
+      postcss-loader: 7.2.4(@types/node@16.9.2)(postcss@8.4.23)(ts-node@10.9.1)(typescript@5.0.4)(webpack@5.80.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       resolve-url-loader: 5.0.0
