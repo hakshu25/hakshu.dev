@@ -54,7 +54,7 @@
     "jsdom": "^21.1.1",
     "lint-staged": "13.2.1",
     "postcss": "8.4.23",
-    "prettier": "2.8.7",
+    "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "storybook": "^7.0.6",
     "stylelint": "15.6.0",
