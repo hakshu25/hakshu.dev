@@ -16,7 +16,13 @@
     },
     {
       "groupName": "test packages",
-      "matchPackagePatterns": ["^jest", "^@types/jest", "^@testing-library/"]
+      "matchPackagePatterns": [
+        "^vitest",
+        "^@vitejs",
+        "^@testing-library/",
+        "jsdom",
+        "^@types/testing-library"
+      ]
     },
     {
       "groupName": "storybook packages",
