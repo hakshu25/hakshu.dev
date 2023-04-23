@@ -3,13 +3,11 @@ import { generateRssXml } from '../../app/_lib/rss';
 
 describe('Rss', () => {
   beforeAll(() => {
-    jest
-      .useFakeTimers('modern')
-      .setSystemTime(new Date('2022-09-25T08:00:00.000Z'));
+    vi.useFakeTimers().setSystemTime(new Date('2022-09-25T08:00:00.000Z'));
   });
 
   afterAll(() => {
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
 
   describe('generateRssXml()', () => {
