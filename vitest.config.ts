@@ -8,5 +8,11 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './__tests__/setup.ts',
+    coverage: {
+      provider: 'c8',
+      all: true,
+      src: ['app'],
+      exclude: ['app/**/*.stories.ts'],
+    },
   },
 });

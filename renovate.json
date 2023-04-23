@@ -17,7 +17,7 @@
     {
       "groupName": "test packages",
       "matchPackagePatterns": [
-        "^vitest",
+        "^@?vitest",
         "^@vitejs",
         "^@testing-library/",
         "jsdom",
