@@ -31,4 +31,4 @@ jobs:
       - run: pnpm lint
       - run: pnpm stylelint
       - run: pnpm prettier
-      - run: pnpm test:ci
+      - run: pnpm test
