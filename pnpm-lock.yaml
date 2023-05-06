@@ -94,8 +94,8 @@ devDependencies:
     specifier: 8.0.3
     version: 8.0.3
   jsdom:
-    specifier: ^21.1.1
-    version: 21.1.1
+    specifier: ^22.0.0
+    version: 22.0.0
   lint-staged:
     specifier: 13.2.2
     version: 13.2.2
@@ -125,7 +125,7 @@ devDependencies:
     version: 5.0.4
   vitest:
     specifier: ^0.31.0
-    version: 0.31.0(jsdom@21.1.1)
+    version: 0.31.0(jsdom@22.0.0)
 
 packages:
 
@@ -3965,7 +3965,7 @@ packages:
       magic-string: 0.30.0
       picocolors: 1.0.0
       std-env: 3.3.2
-      vitest: 0.31.0(jsdom@21.1.1)
+      vitest: 0.31.0(jsdom@22.0.0)
     dev: true
 
   /@vitest/expect@0.31.0:
@@ -4141,13 +4141,6 @@ packages:
     dependencies:
       mime-types: 2.1.35
       negotiator: 0.6.3
-    dev: true
-
-  /acorn-globals@7.0.1:
-    resolution: {integrity: sha512-umOSDSDrfHbTNPuNpC2NSnnA3LUrqpevPb4T9jRx4MagXNS0rs+gwiTcAvqCRmsD6utzsrzNt+ebm00SNWiC3Q==}
-    dependencies:
-      acorn: 8.8.2
-      acorn-walk: 8.2.0
     dev: true
 
   /acorn-import-assertions@1.8.0(acorn@8.8.2):
@@ -7535,9 +7528,9 @@ packages:
       - supports-color
     dev: true
 
-  /jsdom@21.1.1:
-    resolution: {integrity: sha512-Jjgdmw48RKcdAIQyUD1UdBh2ecH7VqwaXPN3ehoZN6MqgVbMn+lRm1aAT1AsdJRAJpwfa4IpwgzySn61h2qu3w==}
-    engines: {node: '>=14'}
+  /jsdom@22.0.0:
+    resolution: {integrity: sha512-p5ZTEb5h+O+iU02t0GfEjAnkdYPrQSkfuTSMkMYyIoMvUNEHsbG0bHHbfXIcfTqD2UfvjQX7mmgiFsyRwGscVw==}
+    engines: {node: '>=16'}
     peerDependencies:
       canvas: ^2.5.0
     peerDependenciesMeta:
@@ -7545,13 +7538,10 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.6
-      acorn: 8.8.2
-      acorn-globals: 7.0.1
       cssstyle: 3.0.0
       data-urls: 4.0.0
       decimal.js: 10.4.3
       domexception: 4.0.0
-      escodegen: 2.0.0
       form-data: 4.0.0
       html-encoding-sniffer: 3.0.0
       http-proxy-agent: 5.0.0
@@ -10832,7 +10822,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest@0.31.0(jsdom@21.1.1):
+  /vitest@0.31.0(jsdom@22.0.0):
     resolution: {integrity: sha512-JwWJS9p3GU9GxkG7eBSmr4Q4x4bvVBSswaCFf1PBNHiPx00obfhHRJfgHcnI0ffn+NMlIh9QGvG75FlaIBdKGA==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -10877,7 +10867,7 @@ packages:
       chai: 4.3.7
       concordance: 5.0.4
       debug: 4.3.4
-      jsdom: 21.1.1
+      jsdom: 22.0.0
       local-pkg: 0.4.3
       magic-string: 0.30.0
       pathe: 1.1.0
