@@ -11,8 +11,8 @@ dependencies:
     specifier: 11.8.0
     version: 11.8.0
   microcms-js-sdk:
-    specifier: 2.3.3
-    version: 2.3.3
+    specifier: 2.4.0
+    version: 2.4.0
   next:
     specifier: 13.3.2
     version: 13.3.2(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)
@@ -4472,6 +4472,12 @@ packages:
     resolution: {integrity: sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==}
     dev: true
 
+  /async-retry@1.3.3:
+    resolution: {integrity: sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==}
+    dependencies:
+      retry: 0.13.1
+    dev: false
+
   /async@3.2.4:
     resolution: {integrity: sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==}
     dev: true
@@ -7983,9 +7989,10 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /microcms-js-sdk@2.3.3:
-    resolution: {integrity: sha512-nJoACr4Df4R5N1k+wiB7qIUkYf7Tm0DJ6+/BAg37YbIMFxGEOdRyVTjyFEJLd7NcYaRKWgIAmsGIuZ/OxjHV+g==}
+  /microcms-js-sdk@2.4.0:
+    resolution: {integrity: sha512-vwZQs9rzi8MPB4EYV9HXDKAr10slnpYuZf4cDim7rhH+wGKv7uZ+5zxNMtc80/uNBi7J/K05a6ZxepnhA08SYw==}
     dependencies:
+      async-retry: 1.3.3
       cross-fetch: 3.1.5(encoding@0.1.13)
       encoding: 0.1.13
       qs: 6.11.0
@@ -9436,6 +9443,11 @@ packages:
       onetime: 5.1.2
       signal-exit: 3.0.7
     dev: true
+
+  /retry@0.13.1:
+    resolution: {integrity: sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==}
+    engines: {node: '>= 4'}
+    dev: false
 
   /reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
