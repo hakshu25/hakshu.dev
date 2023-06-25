@@ -1,10 +1,15 @@
 import { blogClient } from './_lib/blog-client';
 import HomePage from './home-page';
 
-export const revalidate = 60;
-
 async function getPosts() {
-  const { contents } = await blogClient.get({ endpoint: 'posts' });
+  const { contents } = await blogClient.get({
+    customRequestInit: {
+      next: {
+        revalidate: 60,
+      },
+    },
+    endpoint: 'posts',
+  });
   return contents;
 }
 
