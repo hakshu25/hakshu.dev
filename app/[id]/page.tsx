@@ -11,11 +11,17 @@ type Props = {
   params: Params;
 };
 
-export const revalidate = 60;
+const revalidateSeconds = 60;
+
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const { contents }: { contents: Post[] } = await blogClient.get({
+    customRequestInit: {
+      next: {
+        revalidate: revalidateSeconds,
+      },
+    },
     endpoint: 'posts',
   });
 
@@ -26,7 +32,15 @@ export async function generateStaticParams() {
 async function getPost(params: Params) {
   try {
     const id = params.id;
-    const post = await blogClient.get({ endpoint: 'posts', contentId: id });
+    const post = await blogClient.get({
+      customRequestInit: {
+        next: {
+          revalidate: revalidateSeconds,
+        },
+      },
+      endpoint: 'posts',
+      contentId: id,
+    });
     return post;
   } catch (error) {
     notFound();
