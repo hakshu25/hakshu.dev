@@ -17,7 +17,7 @@ type Links = GithubLink & TwitterLink;
 
 const links: Links = {
   github: {
-    link: 'https://github.com/flyhighair',
+    link: 'https://github.com/hakshu25',
     component: GitHubIcon,
   },
   twitter: {
