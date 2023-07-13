@@ -6,7 +6,7 @@ describe('IconLink', () => {
     render(<IconLink iconName={'github'} />);
     const link = screen.getByRole('link').closest('a');
 
-    expect(link).toHaveAttribute('href', 'https://github.com/flyhighair');
+    expect(link).toHaveAttribute('href', 'https://github.com/hakshu25');
   });
 
   it('renders twitter link', () => {
