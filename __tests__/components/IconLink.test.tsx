@@ -13,6 +13,6 @@ describe('IconLink', () => {
     render(<IconLink iconName={'twitter'} />);
     const link = screen.getByRole('link').closest('a');
 
-    expect(link).toHaveAttribute('href', 'https://twitter.com/fly_highup_air');
+    expect(link).toHaveAttribute('href', 'https://twitter.com/hakshu25');
   });
 });
