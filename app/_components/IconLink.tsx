@@ -21,7 +21,7 @@ const links: Links = {
     component: GitHubIcon,
   },
   twitter: {
-    link: 'https://twitter.com/fly_highup_air',
+    link: 'https://twitter.com/hakshu25',
     component: TwitterIcon,
   },
 };
