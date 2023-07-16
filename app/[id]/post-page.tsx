@@ -9,7 +9,9 @@ import { SeparateLine } from '../_components/SeparateLine';
 import { Post } from '../_lib/blog-client';
 import { formatUtcDateTimeToJstDate } from '../_lib/date-util';
 
-type Props = { post: Post };
+interface Props {
+  post: Post;
+}
 
 export default function PostPage({ post }: Props) {
   useEffect(() => {

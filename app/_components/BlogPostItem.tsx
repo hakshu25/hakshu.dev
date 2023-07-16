@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Post } from '../_lib/blog-client';
 import { formatUtcDateTimeToJstDate } from '../_lib/date-util';
 
-type Props = {
+interface Props {
   post: Post;
-};
+}
 
 export const BlogPostItem = ({ post }: Props) => {
   const imageSize = {

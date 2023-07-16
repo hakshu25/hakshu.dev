@@ -1,7 +1,9 @@
 import { Post } from '../_lib/blog-client';
 import { BlogPostItem } from './BlogPostItem';
 
-type Props = { posts: Post[] };
+interface Props {
+  posts: Post[];
+}
 
 export const BlogPostList = ({ posts }: Props) => {
   return (
