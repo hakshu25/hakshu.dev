@@ -3,13 +3,13 @@ import { notFound } from 'next/navigation';
 import { Post, blogClient } from '../_lib/blog-client';
 import PostPage from './post-page';
 
-type Params = {
+interface Params {
   id: string;
-};
+}
 
-type Props = {
+interface Props {
   params: Params;
-};
+}
 
 const revalidateSeconds = 60;
 

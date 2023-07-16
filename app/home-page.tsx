@@ -7,7 +7,9 @@ import { FooterInfo } from './_components/FooterInfo';
 import { FooterLink } from './_components/FooterLink';
 import { SeparateLine } from './_components/SeparateLine';
 
-type Props = { posts: Post[] };
+interface Props {
+  posts: Post[];
+}
 
 export default function HomePage({ posts }: Props) {
   return (

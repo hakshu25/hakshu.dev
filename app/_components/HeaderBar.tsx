@@ -7,9 +7,9 @@ const pageTitles = {
 } as const;
 type PageTitleType = keyof typeof pageTitles;
 
-type Props = {
+interface Props {
   type?: PageTitleType;
-};
+}
 
 export const HeaderBar = ({ type = 'blog' }: Props) => {
   return (
