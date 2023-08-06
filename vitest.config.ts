@@ -11,7 +11,7 @@ export default defineConfig({
     include: ['./__tests__/**/*.test.{ts,tsx}'],
     coverage: {
       all: true,
-      src: ['app'],
+      include: ['app'],
       exclude: ['app/**/*.stories.ts'],
     },
   },
