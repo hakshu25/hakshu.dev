@@ -1,6 +1,5 @@
 import { createClient } from 'microcms-js-sdk';
-
-const apiKey = process.env.CMS_API_KEY as string;
+import { API_KEY } from '../_config';
 
 interface Image {
   url: string;
@@ -22,5 +21,5 @@ export interface Post {
 
 export const blogClient = createClient({
   serviceDomain: 'hakshu-blog',
-  apiKey: apiKey,
+  apiKey: API_KEY,
 });
