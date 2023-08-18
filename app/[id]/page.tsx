@@ -29,10 +29,10 @@ export async function generateStaticParams() {
   return paths;
 }
 
-async function getPost(params: Params) {
+async function getPost(params: Params): Promise<Post> {
   try {
     const id = params.id;
-    const post = await blogClient.get({
+    const post = await blogClient.get<Post>({
       customRequestInit: {
         next: {
           revalidate: revalidateSeconds,

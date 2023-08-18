@@ -19,6 +19,10 @@ export interface Post {
   updatedAt: string;
 }
 
+export interface Contents {
+  contents: Post[];
+}
+
 export const blogClient = createClient({
   serviceDomain: 'hakshu-blog',
   apiKey: API_KEY,
