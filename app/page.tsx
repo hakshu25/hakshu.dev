@@ -1,8 +1,8 @@
-import { blogClient } from './_lib/blog-client';
+import { Contents, blogClient } from './_lib/blog-client';
 import HomePage from './home-page';
 
 async function getPosts() {
-  const { contents } = await blogClient.get({
+  const { contents } = await blogClient.get<Contents>({
     customRequestInit: {
       next: {
         revalidate: 60,

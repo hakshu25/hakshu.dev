@@ -1,9 +1,9 @@
 import { SITE_URL } from '../_config';
-import { blogClient } from '../_lib/blog-client';
+import { Contents, blogClient } from '../_lib/blog-client';
 import { generateRssXml } from '../_lib/rss';
 
 export async function GET() {
-  const { contents } = await blogClient.get({ endpoint: 'posts' });
+  const { contents } = await blogClient.get<Contents>({ endpoint: 'posts' });
   const xml = generateRssXml(contents, SITE_URL);
   return new Response(xml, {
     status: 200,
