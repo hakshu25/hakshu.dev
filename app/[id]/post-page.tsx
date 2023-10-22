@@ -1,6 +1,12 @@
 'use client';
 
-import hljs from 'highlight.js';
+import hljs from 'highlight.js/lib/core';
+import 'highlight.js/styles/atom-one-dark.css';
+import hlbash from 'highlight.js/lib/languages/bash';
+import hlcss from 'highlight.js/lib/languages/css';
+import hljavascript from 'highlight.js/lib/languages/javascript';
+import hltypescript from 'highlight.js/lib/languages/typescript';
+import hlhtml from 'highlight.js/lib/languages/xml';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import { BlogHeader } from '../_components/BlogHeader';
@@ -15,9 +21,13 @@ interface Props {
 
 export default function PostPage({ post }: Props) {
   useEffect(() => {
-    hljs.configure({ languages: ['bash', 'js', 'ts', 'html', 'css'] });
+    hljs.registerLanguage('bash', hlbash);
+    hljs.registerLanguage('js', hljavascript);
+    hljs.registerLanguage('ts', hltypescript);
+    hljs.registerLanguage('html', hlhtml);
+    hljs.registerLanguage('css', hlcss);
     hljs.highlightAll();
-  });
+  }, [post.id, post.body]);
 
   return (
     <>
