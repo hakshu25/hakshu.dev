@@ -1,6 +1,6 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
 import { SITE_URL } from './_config';
 
@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: "Hakshu's Blog",
   description: 'Webエンジニアhakshuのブログ',
   metadataBase: new URL(SITE_URL),
-  viewport: 'minimum-scale=1, initial-scale=1, width=device-width',
   icons: {
     icon: '/img/icon.webp',
   },
@@ -19,6 +18,12 @@ export const metadata: Metadata = {
     description: 'Webエンジニアhakshuのブログ',
     siteName: "Hakshu's Blog",
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
 };
 
 const roboto = Roboto({
