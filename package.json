@@ -50,7 +50,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-unused-imports": "3.0.0",
-    "husky": "8.0.3",
+    "husky": "9.0.10",
     "jsdom": "^23.0.0",
     "lint-staged": "15.2.0",
     "postcss": "8.4.33",
