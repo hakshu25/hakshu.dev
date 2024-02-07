@@ -13,7 +13,7 @@
     "stylelint:fix": "stylelint 'app/*.css' --fix",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
-    "prepare": "husky install",
+    "prepare": "husky",
     "preinstall": "npx only-allow pnpm",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
