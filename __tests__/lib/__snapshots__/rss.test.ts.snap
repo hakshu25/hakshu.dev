@@ -1,8 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Rss > generateRssXml() > フィードを生成する 1`] = `
-"<?xml version=\\"1.0\\" encoding=\\"utf-8\\"?>
-<rss version=\\"2.0\\" xmlns:dc=\\"http://purl.org/dc/elements/1.1/\\" xmlns:content=\\"http://purl.org/rss/1.0/modules/content/\\">
+"<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>タイトル</title>
         <link>http://localhost:3000/test</link>
@@ -19,7 +19,7 @@ exports[`Rss > generateRssXml() > フィードを生成する 1`] = `
             <pubDate>Sat, 25 Jun 2022 08:13:48 GMT</pubDate>
             <description><![CDATA[ブログ1]]></description>
             <content:encoded><![CDATA[ブログ1の中身]]></content:encoded>
-            <enclosure url=\\"http://localhost:3000/image1\\" length=\\"0\\" type=\\"image//image1\\"/>
+            <enclosure url="http://localhost:3000/image1" length="0" type="image//image1"/>
         </item>
         <item>
             <title><![CDATA[ブログ2]]></title>
@@ -28,7 +28,7 @@ exports[`Rss > generateRssXml() > フィードを生成する 1`] = `
             <pubDate>Thu, 25 Aug 2022 08:13:48 GMT</pubDate>
             <description><![CDATA[ブログ2]]></description>
             <content:encoded><![CDATA[ブログ2の中身]]></content:encoded>
-            <enclosure url=\\"http://localhost:3000/image2\\" length=\\"0\\" type=\\"image//image2\\"/>
+            <enclosure url="http://localhost:3000/image2" length="0" type="image//image2"/>
         </item>
     </channel>
 </rss>"
