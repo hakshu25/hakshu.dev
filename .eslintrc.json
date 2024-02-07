@@ -11,6 +11,7 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": ["__tests__/lib/__snapshots__"],
   "rules": {
     "import/order": [
       "error",
