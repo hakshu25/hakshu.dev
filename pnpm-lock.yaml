@@ -55,11 +55,11 @@ importers:
         specifier: ^0.2.0
         version: 0.2.2
       '@testing-library/jest-dom':
-        specifier: 6.4.2
-        version: 6.4.2(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0))
+        specifier: 6.4.5
+        version: 6.4.5(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0))
       '@testing-library/react':
-        specifier: 15.0.5
-        version: 15.0.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 15.0.6
+        version: 15.0.6(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/react':
         specifier: 18.2.79
         version: 18.2.79
@@ -2132,8 +2132,8 @@ packages:
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
     engines: {node: '>=14'}
 
-  '@testing-library/jest-dom@6.4.2':
-    resolution: {integrity: sha512-CzqH0AFymEMG48CpzXFriYYkOjk6ZGPCLMhW9e9jg3KMCn5OfJecF8GtGW7yGfR/IgCe3SX8BSwjdzI6BBbZLw==}
+  '@testing-library/jest-dom@6.4.5':
+    resolution: {integrity: sha512-AguB9yvTXmCnySBP1lWjfNNUwpbElsaQ567lt2VdGqAdHtpieLgjmcVyv1q7PMIvLbgpDdkWV5Ydv3FEejyp2A==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
     peerDependencies:
       '@jest/globals': '>= 28'
@@ -2153,12 +2153,16 @@ packages:
       vitest:
         optional: true
 
-  '@testing-library/react@15.0.5':
-    resolution: {integrity: sha512-ttodVWYA2i2w4hRa6krKrmS1vKxAEkwDz34y+CwbcrbZUxFzUYN3a5xZyFKo+K6LBseCRCUkwcjATpaNn/UsIA==}
+  '@testing-library/react@15.0.6':
+    resolution: {integrity: sha512-UlbazRtEpQClFOiYp+1BapMT+xyqWMnE+hh9tn5DQ6gmlE7AIZWcGpzZukmDZuFk3By01oiqOf8lRedLS4k6xQ==}
     engines: {node: '>=18'}
     peerDependencies:
+      '@types/react': ^18.0.0
       react: ^18.0.0
       react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   '@testing-library/user-event@14.5.2':
     resolution: {integrity: sha512-YAh82Wh4TIrxYLmfGcixwD18oIjyC1pFQC2Y01F2lzV2HTMiYrI0nze0FD0ocB//CKS/7jIUgae+adPqxK5yCQ==}
@@ -9431,7 +9435,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.2(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0))':
+  '@testing-library/jest-dom@6.4.5(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0))':
     dependencies:
       '@adobe/css-tools': 4.3.3
       '@babel/runtime': 7.24.5
@@ -9444,13 +9448,15 @@ snapshots:
     optionalDependencies:
       vitest: 1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0)
 
-  '@testing-library/react@15.0.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@testing-library/react@15.0.6(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.5
       '@testing-library/dom': 10.1.0
       '@types/react-dom': 18.3.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    optionalDependencies:
+      '@types/react': 18.2.79
 
   '@testing-library/user-event@14.5.2(@testing-library/dom@9.3.4)':
     dependencies:
@@ -9615,7 +9621,7 @@ snapshots:
 
   '@types/testing-library__jest-dom@6.0.0(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0))':
     dependencies:
-      '@testing-library/jest-dom': 6.4.2(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0))
+      '@testing-library/jest-dom': 6.4.5(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(less@4.2.0)(terser@5.31.0))
     transitivePeerDependencies:
       - '@jest/globals'
       - '@types/bun'
