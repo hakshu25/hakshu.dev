@@ -24,8 +24,8 @@
     "highlight.js": "11.10.0",
     "microcms-js-sdk": "3.1.2",
     "next": "14.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.6",
@@ -38,7 +38,7 @@
     "@storybook/testing-library": "^0.2.0",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
-    "@types/react": "18.2.79",
+    "@types/react": "18.3.3",
     "@types/testing-library__jest-dom": "6.0.0",
     "@typescript-eslint/eslint-plugin": "7.15.0",
     "@typescript-eslint/parser": "7.15.0",
@@ -55,7 +55,7 @@
     "lint-staged": "15.2.7",
     "postcss": "8.4.39",
     "prettier": "3.3.2",
-    "react-test-renderer": "18.2.0",
+    "react-test-renderer": "18.3.1",
     "storybook": "^7.0.6",
     "stylelint": "16.6.1",
     "stylelint-config-standard": "36.0.1",
