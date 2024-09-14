@@ -23,7 +23,7 @@
     "feed": "4.2.2",
     "highlight.js": "11.10.0",
     "microcms-js-sdk": "3.1.2",
-    "next": "14.2.8",
+    "next": "14.2.11",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
