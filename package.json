@@ -21,7 +21,7 @@
   "dependencies": {
     "@vercel/analytics": "^1.0.0",
     "feed": "4.2.2",
-    "highlight.js": "11.10.0",
+    "highlight.js": "11.11.1",
     "microcms-js-sdk": "3.1.2",
     "next": "14.2.21",
     "react": "18.3.1",
