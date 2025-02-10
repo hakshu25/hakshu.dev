@@ -2,6 +2,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
+import React from 'react';
 import { SITE_URL } from './_config';
 
 export const metadata: Metadata = {
