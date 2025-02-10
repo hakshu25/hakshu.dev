@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import { SvgProps } from '../_lib/svg-props';
 import { GitHubIcon } from './svgs/GitHubIcon';
 import { TwitterIcon } from './svgs/TwitterIcon';
