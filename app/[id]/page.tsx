@@ -42,7 +42,7 @@ async function getPost(params: Params): Promise<Post> {
       contentId: id,
     });
     return post;
-  } catch (error) {
+  } catch {
     notFound();
   }
 }
