@@ -7,6 +7,12 @@
       {
         "ignoreAtRules": ["tailwind"]
       }
+    ],
+    "at-rule-no-deprecated": [
+      true,
+      {
+        "ignoreAtRules": ["apply"]
+      }
     ]
   },
   "ignoreFiles": ["stories/**/*"]
