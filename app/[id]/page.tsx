@@ -8,7 +8,7 @@ interface Params {
 }
 
 interface Props {
-  params: Params;
+  params: Promise<Params>;
 }
 
 const revalidateSeconds = 60;
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
     endpoint: 'posts',
   });
 
-  const paths = contents.map((content) => `/${content.id}`);
+  const paths = contents.map(({ id }) => ({ id }));
   return paths;
 }
 
@@ -47,12 +47,14 @@ async function getPost(params: Params): Promise<Post> {
   }
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const post = await getPost(params);
   return <PostPage post={post} />;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const post = await getPost(params);
   const title = post.title;
   const description = post.body
