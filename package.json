@@ -52,7 +52,7 @@
     "eslint-plugin-unused-imports": "3.2.0",
     "husky": "9.1.7",
     "jsdom": "^26.0.0",
-    "lint-staged": "15.4.3",
+    "lint-staged": "15.5.0",
     "postcss": "8.5.3",
     "prettier": "3.5.3",
     "react-test-renderer": "19.0.0",
