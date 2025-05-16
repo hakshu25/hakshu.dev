@@ -128,10 +128,10 @@ importers:
         version: 37.0.0(stylelint@16.19.1(typescript@5.8.3))
       stylelint-config-tailwindcss:
         specifier: ^1.0.0
-        version: 1.0.0(stylelint@16.19.1(typescript@5.8.3))(tailwindcss@4.1.6)
+        version: 1.0.0(stylelint@16.19.1(typescript@5.8.3))(tailwindcss@4.1.7)
       tailwindcss:
-        specifier: 4.1.6
-        version: 4.1.6
+        specifier: 4.1.7
+        version: 4.1.7
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -5110,9 +5110,6 @@ packages:
   table@6.9.0:
     resolution: {integrity: sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A==}
     engines: {node: '>=10.0.0'}
-
-  tailwindcss@4.1.6:
-    resolution: {integrity: sha512-j0cGLTreM6u4OWzBeLBpycK0WIh8w7kSwcUsQZoGLHZ7xDTdM69lN64AgoIEEwFi0tnhs4wSykUa5YWxAzgFYg==}
 
   tailwindcss@4.1.7:
     resolution: {integrity: sha512-kr1o/ErIdNhTz8uzAYL7TpaUuzKIE6QPQ4qmSdxnoX/lo+5wmUHQA6h3L5yIqEImSRnAAURDirLu/BgiXGPAhg==}
@@ -11095,10 +11092,10 @@ snapshots:
       stylelint: 16.19.1(typescript@5.8.3)
       stylelint-config-recommended: 15.0.0(stylelint@16.19.1(typescript@5.8.3))
 
-  stylelint-config-tailwindcss@1.0.0(stylelint@16.19.1(typescript@5.8.3))(tailwindcss@4.1.6):
+  stylelint-config-tailwindcss@1.0.0(stylelint@16.19.1(typescript@5.8.3))(tailwindcss@4.1.7):
     dependencies:
       stylelint: 16.19.1(typescript@5.8.3)
-      tailwindcss: 4.1.6
+      tailwindcss: 4.1.7
 
   stylelint@16.19.1(typescript@5.8.3):
     dependencies:
@@ -11170,8 +11167,6 @@ snapshots:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-
-  tailwindcss@4.1.6: {}
 
   tailwindcss@4.1.7: {}
 
