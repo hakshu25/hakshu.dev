@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm build` - Build for production
 - `pnpm test` - Run tests with Vitest
 - `pnpm test:coverage` - Run tests with coverage report
-- `pnpm lint` - Run ESLint
+- `pnpm lint` - Run oxlint
 - `pnpm prettier` - Check code formatting
 - `pnpm prettier:fix` - Fix code formatting
 - `pnpm stylelint` - Check CSS/styling
@@ -62,9 +62,7 @@ Required environment variables (see `app/types/env.d.ts`):
 
 ### Code Quality
 
-- ESLint with TypeScript, Next.js, and Storybook configurations
+- oxlint for fast JavaScript/TypeScript linting
 - Prettier for code formatting
 - Stylelint for CSS linting
-- Import ordering enforced alphabetically
-- Unused imports automatically removed
-- Pre-commit hooks via husky and lint-staged
+- Pre-commit hooks via husky and lint-staged with automatic fixes
