@@ -103,14 +103,14 @@ importers:
         specifier: ^8.0.0
         version: 8.6.14(prettier@3.5.3)
       stylelint:
-        specifier: 16.20.0
-        version: 16.20.0(typescript@5.8.3)
+        specifier: 16.21.0
+        version: 16.21.0(typescript@5.8.3)
       stylelint-config-standard:
         specifier: 38.0.0
-        version: 38.0.0(stylelint@16.20.0(typescript@5.8.3))
+        version: 38.0.0(stylelint@16.21.0(typescript@5.8.3))
       stylelint-config-tailwindcss:
         specifier: ^1.0.0
-        version: 1.0.0(stylelint@16.20.0(typescript@5.8.3))(tailwindcss@4.1.10)
+        version: 1.0.0(stylelint@16.21.0(typescript@5.8.3))(tailwindcss@4.1.10)
       tailwindcss:
         specifier: 4.1.10
         version: 4.1.10
@@ -2081,8 +2081,8 @@ packages:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
     engines: {node: '>=8'}
 
-  cacheable@1.9.0:
-    resolution: {integrity: sha512-8D5htMCxPDUULux9gFzv30f04Xo3wCnik0oOxKoRTPIBoqA7HtOcJ87uBhQTs3jCfZZTrUBGsYIZOgE0ZRgMAg==}
+  cacheable@1.10.0:
+    resolution: {integrity: sha512-SSgQTAnhd7WlJXnGlIi4jJJOiHzgnM5wRMEPaXAU4kECTAMpBoYKoZ9i5zHmclIEZbxcu3j7yY/CF8DTmwIsHg==}
 
   call-bind-apply-helpers@1.0.2:
     resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
@@ -2561,8 +2561,8 @@ packages:
     resolution: {integrity: sha512-kOveKLHucVZ6RI91bdWAts9O0L1N2mGzRGVCDQPRnHh4HmgqLdN66Cp/5dMeJZGn/qnBslWliwX37FEBq8DCIA==}
     engines: {node: '>=20', pnpm: '>=10'}
 
-  file-entry-cache@10.1.0:
-    resolution: {integrity: sha512-Et/ex6smi3wOOB+n5mek+Grf7P2AxZR5ueqRUvAAn4qkyatXi3cUC1cuQXVkX0VlzBVsN4BkWJFmY/fYiRTdww==}
+  file-entry-cache@10.1.1:
+    resolution: {integrity: sha512-zcmsHjg2B2zjuBgjdnB+9q0+cWcgWfykIcsDkWDB4GTPtl1eXUA+gTI6sO0u01AqK3cliHryTU55/b2Ow1hfZg==}
 
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
@@ -2596,8 +2596,8 @@ packages:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
     engines: {node: ^10.12.0 || >=12.0.0}
 
-  flat-cache@6.1.9:
-    resolution: {integrity: sha512-DUqiKkTlAfhtl7g78IuwqYM+YqvT+as0mY+EVk6mfimy19U79pJCzDZQsnqk3Ou/T6hFXWLGbwbADzD/c8Tydg==}
+  flat-cache@6.1.10:
+    resolution: {integrity: sha512-B6/v1f0NwjxzmeOhzfXPGWpKBVA207LS7lehaVKQnFrVktcFRfkzjZZ2gwj2i1TkEUMQht7ZMJbABUT5N+V1Nw==}
 
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
@@ -2739,8 +2739,8 @@ packages:
   hmac-drbg@1.0.1:
     resolution: {integrity: sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==}
 
-  hookified@1.9.0:
-    resolution: {integrity: sha512-2yEEGqphImtKIe1NXWEhu6yD3hlFR4Mxk4Mtp3XEyScpSt4pQ4ymmXA1zzxZpj99QkFK+nN0nzjeb2+RUi/6CQ==}
+  hookified@1.9.1:
+    resolution: {integrity: sha512-u3pxtGhKjcSXnGm1CX6aXS9xew535j3lkOCegbA6jdyh0BaAjTbXI4aslKstCr6zUNtoCxFGFKwjbSHdGrMB8g==}
 
   html-encoding-sniffer@4.0.0:
     resolution: {integrity: sha512-Y22oTqIU4uuPgEemfz7NDJz6OeKf12Lsu+QC+s3BVpda64lTiMYCyGwg5ki4vFxkMwQdeZDl2adZoqUgdFuTgQ==}
@@ -3073,8 +3073,8 @@ packages:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
 
-  known-css-properties@0.36.0:
-    resolution: {integrity: sha512-A+9jP+IUmuQsNdsLdcg6Yt7voiMF/D4K83ew0OpJtpu+l34ef7LaohWV0Rc6KNvzw6ZDizkqfyB5JznZnzuKQA==}
+  known-css-properties@0.37.0:
+    resolution: {integrity: sha512-JCDrsP4Z1Sb9JwG0aJ8Eo2r7k4Ou5MwmThS/6lcIe1ICyb7UBJKGRIUUdqc2ASdE/42lgz6zFUnzAIhtXnBVrQ==}
 
   lightningcss-darwin-arm64@1.30.1:
     resolution: {integrity: sha512-c8JK7hyE65X1MHMN+Viq9n11RRC7hgin3HhYKhrMyaXflk5GVplZ60IxyoVtzILeKr+xAJwg6zK6sjTBJ0FKYQ==}
@@ -4068,8 +4068,8 @@ packages:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
 
-  stylelint@16.20.0:
-    resolution: {integrity: sha512-B5Myu9WRxrgKuLs3YyUXLP2H0mrbejwNxPmyADlACWwFsrL8Bmor/nTSh4OMae5sHjOz6gkSeccQH34gM4/nAw==}
+  stylelint@16.21.0:
+    resolution: {integrity: sha512-ki3PpJGG7xhm3WtINoWGnlvqAmbqSexoRMbEMJzlwewSIOqPRKPlq452c22xAdEJISVi80r+I7KL9GPUiwFgbg==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -6623,9 +6623,9 @@ snapshots:
 
   cac@6.7.14: {}
 
-  cacheable@1.9.0:
+  cacheable@1.10.0:
     dependencies:
-      hookified: 1.9.0
+      hookified: 1.9.1
       keyv: 5.3.3
 
   call-bind-apply-helpers@1.0.2:
@@ -7160,9 +7160,9 @@ snapshots:
     dependencies:
       xml-js: 1.6.11
 
-  file-entry-cache@10.1.0:
+  file-entry-cache@10.1.1:
     dependencies:
-      flat-cache: 6.1.9
+      flat-cache: 6.1.10
 
   fill-range@7.1.1:
     dependencies:
@@ -7203,11 +7203,11 @@ snapshots:
       keyv: 4.5.4
       rimraf: 3.0.2
 
-  flat-cache@6.1.9:
+  flat-cache@6.1.10:
     dependencies:
-      cacheable: 1.9.0
+      cacheable: 1.10.0
       flatted: 3.3.3
-      hookified: 1.9.0
+      hookified: 1.9.1
 
   flatted@3.3.3: {}
 
@@ -7369,7 +7369,7 @@ snapshots:
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
 
-  hookified@1.9.0: {}
+  hookified@1.9.1: {}
 
   html-encoding-sniffer@4.0.0:
     dependencies:
@@ -7696,7 +7696,7 @@ snapshots:
 
   kind-of@6.0.3: {}
 
-  known-css-properties@0.36.0: {}
+  known-css-properties@0.37.0: {}
 
   lightningcss-darwin-arm64@1.30.1:
     optional: true
@@ -8727,21 +8727,21 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.27.4
 
-  stylelint-config-recommended@16.0.0(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-recommended@16.0.0(stylelint@16.21.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.20.0(typescript@5.8.3)
+      stylelint: 16.21.0(typescript@5.8.3)
 
-  stylelint-config-standard@38.0.0(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-standard@38.0.0(stylelint@16.21.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.20.0(typescript@5.8.3)
-      stylelint-config-recommended: 16.0.0(stylelint@16.20.0(typescript@5.8.3))
+      stylelint: 16.21.0(typescript@5.8.3)
+      stylelint-config-recommended: 16.0.0(stylelint@16.21.0(typescript@5.8.3))
 
-  stylelint-config-tailwindcss@1.0.0(stylelint@16.20.0(typescript@5.8.3))(tailwindcss@4.1.10):
+  stylelint-config-tailwindcss@1.0.0(stylelint@16.21.0(typescript@5.8.3))(tailwindcss@4.1.10):
     dependencies:
-      stylelint: 16.20.0(typescript@5.8.3)
+      stylelint: 16.21.0(typescript@5.8.3)
       tailwindcss: 4.1.10
 
-  stylelint@16.20.0(typescript@5.8.3):
+  stylelint@16.21.0(typescript@5.8.3):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-tokenizer': 3.0.4
@@ -8756,7 +8756,7 @@ snapshots:
       debug: 4.4.1
       fast-glob: 3.3.3
       fastest-levenshtein: 1.0.16
-      file-entry-cache: 10.1.0
+      file-entry-cache: 10.1.1
       global-modules: 2.0.0
       globby: 11.1.0
       globjoin: 0.1.4
@@ -8764,7 +8764,7 @@ snapshots:
       ignore: 7.0.5
       imurmurhash: 0.1.4
       is-plain-object: 5.0.0
-      known-css-properties: 0.36.0
+      known-css-properties: 0.37.0
       mathml-tag-names: 2.1.3
       meow: 13.2.0
       micromatch: 4.0.8
