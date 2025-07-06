@@ -21,7 +21,7 @@ export const HeaderBar = ({ type = 'blog' }: Props) => {
       <nav>
         <ul className="list-none flex gap-4">
           <li>
-            <Link href="/" passHref={true} prefetch={false}>
+            <Link href="/" prefetch={false}>
               Blog
             </Link>
           </li>
