@@ -8,13 +8,14 @@ import { FooterInfo } from '../_components/FooterInfo';
 import { SeparateLine } from '../_components/SeparateLine';
 import { Post } from '../_lib/blog-client';
 import { formatUtcDateTimeToJstDate } from '../_lib/date-util';
+import { PostSkeleton } from '../_components/PostSkeleton';
 
 // Dynamic import for syntax highlighting - loaded only when needed
 const SyntaxHighlighter = dynamic(
   () => import('../_components/SyntaxHighlighter'),
   {
     ssr: false,
-    loading: () => <div className="animate-pulse bg-gray-200 h-4 rounded" />,
+    loading: () => <PostSkeleton />,
   },
 );
 
@@ -48,11 +49,7 @@ export default function PostPage({ post }: Props) {
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSorjUdEUraGpNH1xvyiWBhWVMUABgMbBX5CRfnzpFGk+S3MnTzepKE+oWHr/aVa9LzR0GK5wDfUMFLBqgkBfUfAHKHJE7/2Fj7VQG4u0kbkPjP8JpN5w+wBF7fM91AZBtFINZ4wLlXNlwWfEwgvfD1qe9w5h5v4n+T/ABWVJLfF4YeQf8KN2dYR5nfgAGzOGY="
             />
           </div>
-          <Suspense
-            fallback={
-              <div className="animate-pulse bg-gray-200 h-32 rounded" />
-            }
-          >
+          <Suspense fallback={<PostSkeleton />}>
             <SyntaxHighlighter content={post.contents} />
           </Suspense>
         </article>
