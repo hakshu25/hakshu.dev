@@ -26,6 +26,7 @@ export const HeaderBar = ({ type = 'blog' }: Props) => {
             </Link>
           </li>
           <li>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/rss" target="_blank" rel="noopener noreferrer">
               RSS
             </a>
