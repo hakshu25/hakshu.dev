@@ -57,7 +57,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
   const post = await getPost(params);
   const title = post.title;
-  const description = post.body
+  const description = post.contents
     .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
     .slice(0, 100);
   const imageUrl = post.image.url;
