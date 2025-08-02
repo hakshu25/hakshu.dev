@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
   experimental: {
     // Optimize package imports for better tree-shaking
     optimizePackageImports: ['highlight.js', 'microcms-js-sdk'],
+    // Enable gzipping for smaller bundles
+    gzipSize: true,
   },
 
   // Turbopack configuration (stable in Next.js 15)
@@ -43,6 +45,10 @@ const nextConfig: NextConfig = {
     // Remove console.log in production
     removeConsole: process.env.NODE_ENV === 'production',
   },
+
+  // Additional performance optimizations
+  poweredByHeader: false,
+  compress: true,
 
   // Headers for better caching and security
   async headers() {
