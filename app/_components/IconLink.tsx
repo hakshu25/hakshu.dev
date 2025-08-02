@@ -36,6 +36,7 @@ export const IconLink = ({ iconName }: Props) => {
   const IconComponent = icon.component;
 
   return (
+    // eslint-disable-next-line @next/next/no-html-link-for-pages
     <a
       href={icon.link}
       target="_blank"
