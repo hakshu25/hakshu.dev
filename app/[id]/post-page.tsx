@@ -40,12 +40,18 @@ export default function PostPage({ post }: Props) {
           </p>
           <div className="w-1/2 h-80 relative text-center mb-8 mx-auto">
             <Image
-              src={post.image.url}
-              alt="Picture of article"
-              className="rounded-md"
+              src={`${post.image.url}?fm=webp&fit=scale&w=800&h=600`}
+              alt={
+                post.title
+                  ? `${post.title}の記事画像`
+                  : 'ブログ記事のメイン画像'
+              }
+              className="rounded-md object-cover"
               fill
-              sizes="100%"
+              sizes="(max-width: 768px) 100vw, 50vw"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSorjUdEUraGpNH1xvyiWBhWVMUABgMbBX5CRfnzpFGk+S3MnTzepKE+oWHr/aVa9LzR0GK5wDfUMFLBqgkBfUfAHKHJE7/2Fj7VQG4u0kbkPjP8JpN5w+wBF7fM91AZBtFINZ4wLlXNlwWfEwgvfD1qe9w5h5v4n+T/ABWVJLfF4YeQf8KN2dYR5nfgAGzOGY="
             ></Image>
           </div>
           <div
