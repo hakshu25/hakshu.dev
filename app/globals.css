@@ -109,3 +109,62 @@
     box-sizing: border-box;
   }
 }
+
+/* Shiki Syntax Highlighting Styles */
+.shiki,
+.shiki pre {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.shiki code {
+  padding: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Responsive design for code blocks */
+@media (width <= 768px) {
+  .shiki,
+  .shiki pre {
+    padding: 12px;
+    margin: 12px 0;
+    max-width: calc(100vw - 32px);
+  }
+}
+
+/* Scrollbar styling for code blocks */
+.shiki::-webkit-scrollbar {
+  height: 8px;
+}
+
+.shiki::-webkit-scrollbar-track {
+  background: #3e4451;
+  border-radius: 4px;
+}
+
+.shiki::-webkit-scrollbar-thumb {
+  background: #5c6370;
+  border-radius: 4px;
+}
+
+.shiki::-webkit-scrollbar-thumb:hover {
+  background: #636d83;
+}
+
+/* Focus accessibility */
+.shiki:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* コンテナの幅制限を追加 */
+.post .shiki {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}

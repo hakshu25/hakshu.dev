@@ -1,67 +1,54 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { codeToHtml } from 'shiki';
 
 interface Props {
   content: string;
 }
 
 export default function SyntaxHighlighter({ content }: Props) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [highlightedContent, setHighlightedContent] = useState<string>('');
 
   useEffect(() => {
-    // Dynamic import for highlight.js - loaded only when this component is used
-    const loadHighlighter = async () => {
-      // Load CSS by creating a link element
-      if (!document.querySelector('link[href*="atom-one-dark"]')) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href =
-          'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css';
-        document.head.appendChild(link);
+    const highlightCode = async () => {
+      // Create a temporary div to parse the HTML content
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = content;
+
+      // Find all code blocks
+      const codeBlocks = tempDiv.querySelectorAll('pre code, code');
+
+      if (codeBlocks.length === 0) {
+        return;
       }
 
-      const { default: hljs } = await import('highlight.js/lib/core');
+      // Process each code block
+      for (const codeBlock of codeBlocks) {
+        const lang = codeBlock
+          .getAttribute?.('class')
+          ?.replace('language-', '');
+        const codeText = codeBlock.textContent || '';
 
-      // Import only the languages we actually need
-      const [
-        { default: hlbash },
-        { default: hljavascript },
-        { default: hltypescript },
-        { default: hlhtml },
-        { default: hlcss },
-      ] = await Promise.all([
-        import('highlight.js/lib/languages/bash'),
-        import('highlight.js/lib/languages/javascript'),
-        import('highlight.js/lib/languages/typescript'),
-        import('highlight.js/lib/languages/xml'),
-        import('highlight.js/lib/languages/css'),
-      ]);
+        const code = await codeToHtml(codeText, {
+          lang: lang ?? 'plaintext',
+          theme: 'one-dark-pro',
+        });
+        codeBlock.outerHTML = code;
+      }
 
-      // Register languages
-      hljs.registerLanguage('bash', hlbash);
-      hljs.registerLanguage('js', hljavascript);
-      hljs.registerLanguage('javascript', hljavascript);
-      hljs.registerLanguage('ts', hltypescript);
-      hljs.registerLanguage('typescript', hltypescript);
-      hljs.registerLanguage('html', hlhtml);
-      hljs.registerLanguage('xml', hlhtml);
-      hljs.registerLanguage('css', hlcss);
-
-      // Apply highlighting
-      hljs.highlightAll();
-      setIsLoaded(true);
+      setHighlightedContent(tempDiv.innerHTML);
     };
 
-    loadHighlighter();
+    highlightCode();
   }, [content]);
 
   return (
     <div
       dangerouslySetInnerHTML={{
-        __html: content,
+        __html: highlightedContent || content,
       }}
-      className={`post ${isLoaded ? 'opacity-100' : 'opacity-70'} transition-opacity duration-300`}
+      className={'post transition-opacity duration-300'}
     />
   );
 }
