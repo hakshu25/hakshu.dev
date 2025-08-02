@@ -16,6 +16,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm stylelint:fix` - Fix CSS/styling issues
 - `pnpm storybook` - Run Storybook development server on port 6006
 - `pnpm build-storybook` - Build Storybook for production
+- `pnpm analyze` - Analyze bundle size with interactive visualization
+- `pnpm analyze:server` - Analyze server-side bundle only
+- `pnpm analyze:browser` - Analyze client-side bundle only
 
 This project strictly uses pnpm as the package manager (enforced via preinstall script).
 
@@ -80,6 +83,7 @@ Required environment variables (see `app/types/env.d.ts`):
 - **Stylelint**: CSS linting with Tailwind CSS compatibility
 - **Pre-commit Hooks**: Husky + lint-staged for automatic linting and formatting
 - **Dependency Management**: Renovate bot for automated dependency updates
+- **Bundle Analysis**: @next/bundle-analyzer for performance monitoring and optimization
 
 ### Development Workflow
 
@@ -87,4 +91,21 @@ Required environment variables (see `app/types/env.d.ts`):
 2. **Component Development**: Use Storybook (`pnpm storybook`) for isolated component development
 3. **Testing**: Run `pnpm test` or `pnpm test:coverage` for comprehensive testing
 4. **Quality Checks**: Pre-commit hooks automatically run linting and formatting
-5. **Build Verification**: Always run `pnpm build` before deployment to catch issues
+5. **Performance Analysis**: Use `pnpm analyze` to monitor bundle size and optimize
+6. **Build Verification**: Always run `pnpm build` before deployment to catch issues
+
+### Bundle Analysis
+
+Use `@next/bundle-analyzer` to monitor and optimize application performance:
+
+```bash
+pnpm analyze              # Full bundle analysis
+pnpm analyze:browser      # Client-side only
+pnpm analyze:server       # Server-side only
+```
+
+Key metrics to monitor:
+
+- **First Load JS**: Should stay under 110KB
+- **Page-specific bundles**: Additional JS should be minimal
+- **Shared chunks**: Monitor for unnecessary duplication
