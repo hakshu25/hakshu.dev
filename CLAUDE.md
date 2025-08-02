@@ -8,25 +8,29 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm build` - Build for production
 - `pnpm test` - Run tests with Vitest
 - `pnpm test:coverage` - Run tests with coverage report
-- `pnpm lint` - Run oxlint
+- `pnpm test -- specific-test-file` - Run specific test file
+- `pnpm lint` - Run oxlint (faster alternative to ESLint)
 - `pnpm prettier` - Check code formatting
 - `pnpm prettier:fix` - Fix code formatting
-- `pnpm stylelint` - Check CSS/styling
+- `pnpm stylelint` - Check CSS/styling with Tailwind CSS support
 - `pnpm stylelint:fix` - Fix CSS/styling issues
 - `pnpm storybook` - Run Storybook development server on port 6006
 - `pnpm build-storybook` - Build Storybook for production
 
-This project uses pnpm as the package manager.
+This project strictly uses pnpm as the package manager (enforced via preinstall script).
 
 ## Architecture
 
 This is a Next.js 15 blog application with the following structure:
 
-- **Content Management**: Uses microCMS as a headless CMS for blog posts
-- **Styling**: Tailwind CSS 4.x with custom PostCSS configuration
+- **Framework**: Next.js 15 with App Router and React 19
+- **Content Management**: microCMS as headless CMS with typed API client
+- **Styling**: Tailwind CSS 4.x with custom theme configuration and PostCSS
 - **Testing**: Vitest with jsdom environment and React Testing Library
 - **Component Development**: Storybook for component isolation and documentation
 - **Type Safety**: TypeScript with strict configuration
+- **Performance**: Incremental Static Regeneration (ISR) with 60-second revalidation
+- **Quality**: oxlint + Prettier + Stylelint with pre-commit hooks (Husky)
 
 ### Key Directories
 
@@ -42,8 +46,17 @@ This is a Next.js 15 blog application with the following structure:
 
 1. Blog posts are fetched from microCMS API via `blogClient` in `app/_lib/blog-client.ts`
 2. The main page (`app/page.tsx`) fetches posts and passes them to `HomePage` component
-3. Individual post pages use dynamic routing with `[id]` parameter
+3. Individual post pages use dynamic routing with `[id]` parameter and ISR caching
 4. RSS feed is generated at `/rss` route using the `feed` library
+5. All content is cached with 60-second revalidation for optimal performance
+
+### Key Technical Details
+
+- **Tailwind CSS 4.x**: Uses `@theme` directive for custom configuration in CSS files
+- **oxlint**: Replaces ESLint for faster linting with TypeScript, React, and Next.js plugins
+- **ISR Strategy**: Pages revalidate every 60 seconds, with 1-year client-side cache
+- **Component Architecture**: Storybook stories co-located with components for documentation
+- **Pre-commit Hooks**: Automatic linting and formatting via Husky and lint-staged
 
 ### Environment Variables
 
@@ -62,7 +75,16 @@ Required environment variables (see `app/types/env.d.ts`):
 
 ### Code Quality
 
-- oxlint for fast JavaScript/TypeScript linting
-- Prettier for code formatting
-- Stylelint for CSS linting
-- Pre-commit hooks via husky and lint-staged with automatic fixes
+- **oxlint**: Fast JavaScript/TypeScript linting with import, React, and Next.js plugins
+- **Prettier**: Code formatting with single quotes and standard configuration
+- **Stylelint**: CSS linting with Tailwind CSS compatibility
+- **Pre-commit Hooks**: Husky + lint-staged for automatic linting and formatting
+- **Dependency Management**: Renovate bot for automated dependency updates
+
+### Development Workflow
+
+1. **Local Development**: Use `pnpm dev` with Turbopack for fast hot reloading
+2. **Component Development**: Use Storybook (`pnpm storybook`) for isolated component development
+3. **Testing**: Run `pnpm test` or `pnpm test:coverage` for comprehensive testing
+4. **Quality Checks**: Pre-commit hooks automatically run linting and formatting
+5. **Build Verification**: Always run `pnpm build` before deployment to catch issues
