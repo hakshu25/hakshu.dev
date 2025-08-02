@@ -22,7 +22,7 @@ export function generateRssXml(posts: Post[], siteUrl: string) {
       id: `${siteUrl}/${post.id}`,
       link: `${siteUrl}/${post.id}`,
       description: post.title,
-      content: post.body,
+      content: post.contents,
       date: new Date(post.publishedAt),
       image: post.image.url,
     });

@@ -27,7 +27,7 @@ export default function PostPage({ post }: Props) {
     hljs.registerLanguage('html', hlhtml);
     hljs.registerLanguage('css', hlcss);
     hljs.highlightAll();
-  }, [post.id, post.body]);
+  }, [post.id, post.contents]);
 
   return (
     <>
@@ -56,7 +56,7 @@ export default function PostPage({ post }: Props) {
           </div>
           <div
             dangerouslySetInnerHTML={{
-              __html: `${post.body}`,
+              __html: `${post.contents}`,
             }}
             className="post"
           />
