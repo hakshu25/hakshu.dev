@@ -26,9 +26,9 @@ export const HeaderBar = ({ type = 'blog' }: Props) => {
             </Link>
           </li>
           <li>
-            <a href="/rss" target="_blank" rel="noopener noreferrer">
+            <Link href="/rss" target="_blank" rel="noopener noreferrer">
               RSS
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

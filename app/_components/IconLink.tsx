@@ -3,6 +3,7 @@ import { SvgProps } from '../_lib/svg-props';
 import { GitHubIcon } from './svgs/GitHubIcon';
 import { TwitterIcon } from './svgs/TwitterIcon';
 
+import Link from 'next/link';
 export type IconName = 'github' | 'twitter';
 interface LinkMapping {
   link: string;
@@ -36,13 +37,13 @@ export const IconLink = ({ iconName }: Props) => {
   const IconComponent = icon.component;
 
   return (
-    <a
+    <Link
       href={icon.link}
       target="_blank"
       rel="noopener noreferrer"
       className="hover:opacity-70"
     >
       <IconComponent width={100} height={100} />
-    </a>
+    </Link>
   );
 };
