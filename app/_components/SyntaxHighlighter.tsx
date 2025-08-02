@@ -11,6 +11,8 @@ export default function SyntaxHighlighter({ content }: Props) {
   const [highlightedContent, setHighlightedContent] = useState<string>('');
 
   useEffect(() => {
+    let isMounted = true;
+
     const highlightCode = async () => {
       // Create a temporary div to parse the HTML content
       const tempDiv = document.createElement('div');
@@ -23,24 +25,38 @@ export default function SyntaxHighlighter({ content }: Props) {
         return;
       }
 
-      // Process each code block
-      for (const codeBlock of codeBlocks) {
-        const lang = codeBlock
-          .getAttribute?.('class')
-          ?.replace('language-', '');
-        const codeText = codeBlock.textContent || '';
+      try {
+        // Process each code block
+        for (const codeBlock of codeBlocks) {
+          const lang = codeBlock
+            .getAttribute?.('class')
+            ?.replace('language-', '');
+          const codeText = codeBlock.textContent || '';
 
-        const code = await codeToHtml(codeText, {
-          lang: lang ?? 'plaintext',
-          theme: 'one-dark-pro',
-        });
-        codeBlock.outerHTML = code;
+          const code = await codeToHtml(codeText, {
+            lang: lang ?? 'plaintext',
+            theme: 'one-dark-pro',
+          });
+          codeBlock.outerHTML = code;
+        }
+      } catch (error) {
+        console.error('Error highlighting code:', error);
+        // フォールバックとして元のコンテンツを使用
+        if (isMounted) {
+          setHighlightedContent(content);
+        }
       }
 
-      setHighlightedContent(tempDiv.innerHTML);
+      if (isMounted) {
+        setHighlightedContent(tempDiv.innerHTML);
+      }
     };
 
     highlightCode();
+
+    return () => {
+      isMounted = false; // Cleanup to avoid setting state on unmounted component
+    };
   }, [content]);
 
   return (
