@@ -11,16 +11,9 @@ const nextConfig: NextConfig = {
   // Next.js 15 performance optimizations
   experimental: {
     // Optimize package imports for better tree-shaking
-    optimizePackageImports: ['highlight.js', 'microcms-js-sdk'],
+    optimizePackageImports: ['shiki', 'microcms-js-sdk'],
     // Enable gzipping for smaller bundles
     gzipSize: true,
-  },
-
-  // Turbopack configuration (stable in Next.js 15)
-  turbopack: {
-    rules: {
-      '*.css': ['css'],
-    },
   },
 
   // Image optimization with Next.js 15 improvements
