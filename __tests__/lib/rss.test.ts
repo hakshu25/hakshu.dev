@@ -17,7 +17,7 @@ describe('Rss', () => {
         {
           id: '2sef2d',
           title: 'ブログ1',
-          body: 'ブログ1の中身',
+          contents: 'ブログ1の中身',
           image: {
             url: 'http://localhost:3000/image1',
             height: 300,
@@ -32,7 +32,7 @@ describe('Rss', () => {
         {
           id: '3ldjsf',
           title: 'ブログ2',
-          body: 'ブログ2の中身',
+          contents: 'ブログ2の中身',
           image: {
             url: 'http://localhost:3000/image2',
             height: 500,
