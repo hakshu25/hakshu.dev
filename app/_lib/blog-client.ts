@@ -10,7 +10,7 @@ interface Image {
 export interface Post {
   id: string;
   title: string;
-  body: string;
+  contents: string;
   image: Image;
   category: string[];
   publishedAt: string;

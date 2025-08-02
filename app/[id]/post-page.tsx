@@ -53,7 +53,7 @@ export default function PostPage({ post }: Props) {
               <div className="animate-pulse bg-gray-200 h-32 rounded" />
             }
           >
-            <SyntaxHighlighter content={post.body} />
+            <SyntaxHighlighter content={post.contents} />
           </Suspense>
         </article>
         <div className="mt-4">

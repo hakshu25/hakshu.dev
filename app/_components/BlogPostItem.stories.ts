@@ -15,7 +15,7 @@ export const Item: Story = {
     post: {
       id: 'blog-post-id',
       title: 'ブログのタイトル',
-      body: 'ブログの本文',
+      contents: 'ブログの本文',
       image: {
         url: 'https://placehold.jp/3d4070/ffffff/600x600.png?text=sample',
         width: 100,
