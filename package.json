@@ -59,7 +59,7 @@
     "stylelint": "16.23.1",
     "stylelint-config-standard": "39.0.0",
     "stylelint-config-tailwindcss": "^1.0.0",
-    "tailwindcss": "4.1.11",
+    "tailwindcss": "4.1.12",
     "typescript": "5.9.2",
     "vitest": "^3.0.0"
   },
