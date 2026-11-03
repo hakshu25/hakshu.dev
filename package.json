@@ -26,13 +26,13 @@
     "feed": "5.1.0",
     "highlight.js": "11.11.1",
     "microcms-js-sdk": "3.2.0",
-    "next": "15.5.9",
+    "next": "15.5.29",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "shiki": "^3.9.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.4.5",
+    "@next/bundle-analyzer": "^15.5.29",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
     "@storybook/addon-links": "^9.0.0",
